@@ -587,10 +587,6 @@ video {
   display: flex;
 }
 
-.h-14 {
-  height: 3.5rem;
-}
-
 .h-80 {
   height: 20rem;
 }
@@ -628,6 +624,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+*{
+  font-family: "Cairo", sans-serif;
 }
 
 body{
