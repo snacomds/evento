@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl"></html>
+<html lang="ar" dir="rtl">
+
+</html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
     <link href="./assets/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,21 +20,45 @@
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Oswald:wght@200..700&family=Roboto:ital,wght@1,300&display=swap"
         rel="stylesheet">
 
+
     <title>Evanto</title>
 </head>
 
 <body>
-    <nav class="container mx-auto py-4">
-        <a class="text-12 font-['Oswald'] text-white cursor-pointer ">evento</a>
+    <nav class="container mx-auto pt-8 pb-4">
+        <div class="flex justify-between">
+            <div class="flex gap-20 items-center">
+                <a class="font-['Oswald'] text-white cursor-pointer text-2xl">evento</a>
+                <div class="flex gap-8">
+                    <a href="#">خدماتنا</a>
+                    <a href="#">مقالات</a>
+                    <a href="#">عن ايفانتو</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex gap-2 items-center justify-start py-2 px-4">
+                    <label for="search" class="ti ti-search"></label>
+                    <input class="bg-transparent outline-none" id="search" type="text" placeholder="بحث في الموقع">
+                </div>
+                <a class="py-2 px-4 text-indigo-500  border border-solid border-indigo-500 rounded-full">تسجيل</a>
+                <a class="py-2 px-4 bg-indigo-500 rounded-full">تسجيل الدخول</a>
+            </div>
+        </div>
     </nav>
-    <section class="container mx-auto h-[800px] w-full flex items-center">
-        <div>
-            <h1 class="text-white">احصل على ما تريد ومن أي مكان تريد</h1>
+    <section class="container mx-auto w-full grid grid-cols-2 gap-8 items-center">
+        <div class="col-span-1">
+            <h1 class="text-white text-4xl font-800">احصل على ما تريد ومن أي مكان تريد</h1>
+        </div>
+        <div class="col-span-1">
+            <img src="./assets/photos/heroPhoto.png" alt="">
         </div>
     </section>
-    <section class="h-80 w-full bg-white">
-        <div class="container mx-auto">hello</div>
+    <section class="h-80 w-full ">
+        <div class="container mx-auto ">hello</div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+
 </body>
 
 </html>
