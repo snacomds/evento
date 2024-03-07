@@ -20,6 +20,12 @@
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Oswald:wght@200..700&family=Roboto:ital,wght@1,300&display=swap"
         rel="stylesheet">
 
+        <!-- swiper -->
+        <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
 
     <title>Evanto</title>
 </head>
@@ -41,7 +47,7 @@
                     <input class="bg-transparent outline-none" id="search" type="text" placeholder="بحث في الموقع">
                 </div>
                 <a class="py-2 px-4 text-indigo-500  border border-solid border-indigo-500 rounded-full">تسجيل</a>
-                <a class="py-2 px-4 bg-indigo-500 rounded-full">تسجيل الدخول</a>
+                <div class="pointer-events-auto ml-8 rounded-full bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">تسجيل الدخول</div>
             </div>
         </div>
     </nav>
@@ -61,10 +67,30 @@
 
     <section class="h-[800px] w-full pt-24">
         <h2 class="container mx-auto text-center">خدماتنا</h2>
+
     </section>
 
     <section class="h-[800px] w-full pt-24 bg-white">
         <h2 class="container mx-auto text-center text-black">كيف أطلب خدمتي</h2>
+        <div class="swiper w-[600px] h-[300px]">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper ">
+              <!-- Slides -->
+              <div class="swiper-slide text-black text-center">Slide 1</div>
+              <div class="swiper-slide text-black text-center">Slide 2</div>
+              <div class="swiper-slide text-black text-center">Slide 3</div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
     </section>
     <section class="h-[800px] w-full pt-24">
         <h2 class="container mx-auto text-center">الخدمات الأكثر طلباً</h2>
@@ -116,14 +142,16 @@
                     <a href="#">مقالات</a>
                     <a href="#">عن ايفانتو</a>
                 </div>
-                <p dir="ltr">© 2024  All rights reserved.</p>
+                <p dir="ltr">© 2024 All rights reserved.</p>
             </div>
 
         </div>
     </footer>
-
+    <script type="module" src="./assets/index.js"></script>
+    <!-- Tabler icons set -->
     <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
-
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>
