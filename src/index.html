@@ -186,12 +186,37 @@
 
         </div>
     </section>
-    <section class="container mx-auto h-[800px] w-full pt-24">
+    <section class="container mx-auto h-fit w-full pt-24 pb-12">
         <h2 class="container mx-auto text-center">الخدمات الأكثر طلباً</h2>
 
         <div class="grid grid-cols-2 gap-8">
             <div class="flex flex-col items-center gap-6 bg-[#191F2E] rounded-xl p-4 col-span-1">
                 <div class="w-full rounded-xl overflow-hidden "><img class="w-full" src="./assets/photos/orderd(1).png"
+                        alt=""></div>
+                <p>محاسب</p>
+                <div
+                    class="pointer-events-auto rounded-full bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">
+                    اطلب الآن</div>
+            </div>
+
+            <div class="flex flex-col items-center gap-6 bg-[#191F2E] rounded-xl p-4 col-span-1">
+                <div class="w-full rounded-xl overflow-hidden "><img class="w-full" src="./assets/photos/orderd(2).png"
+                        alt=""></div>
+                <p>محاسب</p>
+                <div
+                    class="pointer-events-auto rounded-full bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">
+                    اطلب الآن</div>
+            </div>
+            <div class="flex flex-col items-center gap-6 bg-[#191F2E] rounded-xl p-4 col-span-1">
+                <div class="w-full rounded-xl overflow-hidden "><img class="w-full" src="./assets/photos/orderd(3).png"
+                        alt=""></div>
+                <p>محاسب</p>
+                <div
+                    class="pointer-events-auto rounded-full bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">
+                    اطلب الآن</div>
+            </div>
+            <div class="flex flex-col items-center gap-6 bg-[#191F2E] rounded-xl p-4 col-span-1">
+                <div class="w-full rounded-xl overflow-hidden "><img class="w-full" src="./assets/photos/orderd(4).png"
                         alt=""></div>
                 <p>محاسب</p>
                 <div
@@ -244,11 +269,56 @@
 
 
     <section class="h-[800px] w-full pt-24 bg-white">
-        <h2 class="container mx-auto text-center text-black">شركاء النجاح</h2>
+        <h2 class="container mx-auto text-center text-black p-12">شركاء النجاح</h2>
+
+        <div class="container mx-auto flex flex-col gap-4 justify-center items-center">
+            <div class="flex gap-4">
+                <div class="flex items-center rounded-3xl aspect-[4/3] border w-40 h-fit  overflow-hidden"><img src="./assets/photos/logo(6).png" alt=""></div>
+                <div class="flex items-center rounded-3xl aspect-[4/3] border w-44 h-fit  overflow-hidden"><img class="w-full" src="./assets/photos/logo(2).png" alt=""></div>
+                <div class="flex items-center rounded-3xl aspect-[4/3] border w-28 h-fit  overflow-hidden"><img  src="./assets/photos/logo(3).png" alt=""></div>
+            </div>
+            <div class="flex gap-4">
+                <div class="flex items-center rounded-3xl aspect-[4/3] border w-36 h-fit  overflow-hidden"><img class="h-full" src="./assets/photos/logo(4).png" alt=""></div>
+                <div class="flex items-center rounded-3xl aspect-[4/3] border w-28 h-fit p-2 overflow-hidden"><img src="./assets/photos/logo(1).png" alt=""></div>
+                <div class="flex items-center rounded-3xl aspect-[4/3] border w-40 h-fit  overflow-hidden"><img src="./assets/photos/logo(5).png" alt=""></div>
+            </div>
+        </div>
     </section>
 
-    <section class="h-[800px] w-full pt-24 bg-white">
+    <section class="h-[800px] w-full pt-24 bg-white overflow-hidden">
         <h2 class="container mx-auto text-center text-black">المقالات</h2>
+
+        <div class="articles-swiper container mx-auto overflow-hidden relative h-[600px]">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper gap-4 items-center justify-center">
+                <!-- Slides -->
+                <div  class="swiper-slide !w-[40rem] !h-fit relative !flex flex-col items-center gap-4 overflow-hidden ">
+                    <div class="w-full rounded-2xl overflow-hidden"><img class="w-full" src="./assets/photos/article(1).png" alt=""></div>
+                    <p class=" text-gray-700 text-center m-4">كيف تصبح نجاراً بارعاً في وقت سريع وبشكل ممتاز</p>
+                    <div class="pointer-events-auto w-fit rounded-full border-solid border border-gray-700 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-gray-700 hover:bg-indigo-500 hover:text-white">
+                        اقراء المزيد
+                        <i class="ti ti-external-link text-inherit"></i>
+                    </div>
+
+                </div>
+
+                <div  class="swiper-slide !w-[40rem] !h-fit relative !flex flex-col items-center gap-4 overflow-hidden ">
+                    <div class="w-full rounded-2xl overflow-hidden"><img class="w-full" src="./assets/photos/article(2).png" alt=""></div>
+                    <p class=" text-gray-700 text-center m-4">كيف تصبح نجاراً بارعاً في وقت سريع وبشكل ممتاز</p>
+                    <div class="pointer-events-auto w-fit rounded-full border-solid border border-gray-700 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-gray-700 hover:bg-indigo-500 hover:text-white">
+                        اقراء المزيد
+                        <i class="ti ti-external-link text-inherit"></i>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev bg-black !opacity-75 after:!text-xl !text-white p-6 rounded-full"></div>
+            <div class="swiper-button-next bg-black !opacity-75 after:!text-xl !text-white p-6 rounded-full"></div>
+
+        </div>
     </section>
 
     <footer class="container mx-auto bg-black">
