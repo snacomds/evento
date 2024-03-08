@@ -28,14 +28,17 @@
 </head>
 
 <body>
-    <nav class="container mx-auto pt-8 pb-4">
-        <div class="flex justify-between">
+    <div dir="ltr" aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-25 z-0 ">
+        <div class="blur-[106px] h-32 bg-gradient-to-r from-[#7F1CFC] to-[#59DCDC] "></div>
+    </div>
+    <nav class="relative w-full top-0 z-10">
+        <div class="flex justify-between container mx-auto pt-8 pb-4 z-10">
             <div class="flex gap-20 items-center">
-                <a class="font-['Oswald'] text-white cursor-pointer text-2xl">evento</a>
+                <a href="#" class="font-['Oswald'] text-white cursor-pointer text-2xl">evento</a>
                 <div class="flex gap-8">
-                    <a href="#">خدماتنا</a>
-                    <a href="#">مقالات</a>
-                    <a href="#">عن ايفانتو</a>
+                    <a href="#services" class="hover:text-[#FF1C60]  transition ease-in">خدماتنا</a>
+                    <a href="#articles" class="hover:text-[#FF1C60] transition ease-in">مقالات</a>
+                    <a href="#" class="hover:text-[#FF1C60] transition ease-in">عن ايفانتو</a>
                 </div>
             </div>
             <div class="flex items-center gap-4">
@@ -43,28 +46,35 @@
                     <label for="search" class="ti ti-search"></label>
                     <input class="bg-transparent outline-none" id="search" type="text" placeholder="بحث في الموقع">
                 </div>
-                <a class="py-2 px-4 text-indigo-500  border border-solid border-indigo-500 rounded-full">تسجيل</a>
                 <div
-                    class="pointer-events-auto ml-8 rounded-full bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">
+                class="pointer-events-auto cursor-pointer border border-[#FF1C60] rounded-full px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-[#FF1C60] hover:text-white hover:bg-[#ff1c60ce]">
+                تسجيل</div>
+                <div
+                    class="pointer-events-auto cursor-pointer  rounded-full bg-[#FF1C60] px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-[#ff1c60ce]">
                     تسجيل الدخول</div>
             </div>
         </div>
     </nav>
 
-    <section class="container mx-auto w-full grid grid-cols-2 gap-8 items-center">
+    <section class="relative container h- mx-auto w-full grid grid-cols-2 gap-8 items-center z-10">
         <div class="col-span-1 flex flex-col gap-8">
             <h1 class="text-white text-4xl font-bold block">احصل على ما تريد ومن أي مكان تريد</h1>
             <div class="flex gap-4">
                 <a class="py-2 px-4 text-indigo-500  border border-solid border-indigo-500 rounded-full">اطلب خدمتك</a>
-                <a class="py-2 px-4 bg-indigo-500 rounded-full">أضف خدمتك</a>
+                <div class="pointer-events-auto cursor-pointer rounded-full bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500">أضف خدمتك</div>
             </div>
         </div>
-        <div class="col-span-1">
-            <img src="./assets/photos/heroPhoto.png" alt="">
+        <div class="col-span-1 py-8">
+            <img class="ms-auto" src="./assets/photos/hero.png" alt="">
         </div>
     </section>
+ 
 
-    <section class="h-[800px] w-full pt-24 overflow-hidden">
+    <section id="services" class="h-[800px] relative w-full pt-14 ">
+        <div  aria-hidden="true" class="absolute py-4 inset-0 grid grid-cols-2 -space-x-52 opacity-20 z-0 ">
+
+            <div class="blur-[106px] h-56 bg-gradient-to-br from-[#7F1CFC] to-purple-400 "></div>
+        </div>
         <h2 class="container mx-auto text-center">خدماتنا</h2>
 
 
@@ -268,7 +278,7 @@
     </section>
 
 
-    <section class="h-[800px] w-full pt-24 bg-white">
+    <section class="w-full pt-24 pb-12 bg-white">
         <h2 class="container mx-auto text-center text-black p-12">شركاء النجاح</h2>
 
         <div class="container mx-auto flex flex-col gap-4 justify-center items-center">
@@ -285,7 +295,7 @@
         </div>
     </section>
 
-    <section class="h-[800px] w-full pt-24 bg-white overflow-hidden">
+    <section id="articles" class="h-[800px] w-full pt-24 bg-white overflow-hidden">
         <h2 class="container mx-auto text-center text-black">المقالات</h2>
 
         <div class="articles-swiper container mx-auto overflow-hidden relative h-[600px]">
@@ -321,15 +331,15 @@
         </div>
     </section>
 
-    <footer class="container mx-auto bg-black">
+    <footer class="container mx-auto">
         <div class="flex flex-col pt-12 gap-20">
             <div class="flex justify-between itema-center gap-8">
                 <div class="flex flex-col gap-8 items-start">
-                    <a class="font-['Oswald'] text-white cursor-pointer text-2xl">evento</a>
+                    <a href="#" class="font-['Oswald'] text-white cursor-pointer text-2xl">evento</a>
                     <div class="flex gap-8">
-                        <a href="#">خدماتنا</a>
-                        <a href="#">مقالات</a>
-                        <a href="#">عن ايفانتو</a>
+                        <a href="#services" class="hover:text-[#FF1C60]  transition ease-in">خدماتنا</a>
+                        <a href="#articles" class="hover:text-[#FF1C60] transition ease-in">مقالات</a>
+                        <a href="#" class="hover:text-[#FF1C60] transition ease-in">عن ايفانتو</a>
                     </div>
                 </div>
 
@@ -352,9 +362,9 @@
 
             <div class="flex justify-between items-center py-8 mb-6">
                 <div class="flex gap-8">
-                    <a href="#">خدماتنا</a>
-                    <a href="#">مقالات</a>
-                    <a href="#">عن ايفانتو</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookies</a>
                 </div>
                 <p dir="ltr">© 2024 All rights reserved.</p>
             </div>
