@@ -27,3 +27,25 @@ const servicesSwiper = new Swiper('.services-swiper', {
   setInterval(()=>{
     servicesSwiper.slideNext();
   },10000);
+
+
+  const customersSwiper = new Swiper('.customers-swiper', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 0,
+      modifier: 2.5,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
