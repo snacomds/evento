@@ -1,7 +1,7 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
 
-const swiper = new Swiper('.swiper', {
+const servicesSwiper = new Swiper('.services-swiper', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
@@ -10,7 +10,7 @@ const swiper = new Swiper('.swiper', {
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
-      depth: 100,
+      depth: 0,
       modifier: 2.5,
     },
     pagination: {
@@ -20,6 +20,10 @@ const swiper = new Swiper('.swiper', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    }
+    },
   });
 
+
+  setInterval(()=>{
+    servicesSwiper.slideNext();
+  },10000);
