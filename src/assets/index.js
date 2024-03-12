@@ -39,13 +39,17 @@ const servicesSwiper = new Swiper('.services-swiper', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
+    loop: true,
+    speed: 500,
+    spaceBetween: 40,
     slidesPerView: 'auto',
     coverflowEffect: {
       rotate: 0,
-      stretch: 0,
       depth: 0,
-      modifier: 2.5,
-    },
+      modifier: 0.5,
+      slideShadows: false,
+    
+  },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
