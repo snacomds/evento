@@ -39,14 +39,14 @@ const servicesSwiper = new Swiper('.services-swiper', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
-    loop: true,
     speed: 500,
+    loop: true,
     spaceBetween: 40,
     slidesPerView: 'auto',
     coverflowEffect: {
       rotate: 0,
       depth: 0,
-      modifier: 0.5,
+      modifier: 1,
       slideShadows: false,
     
   },
@@ -64,13 +64,18 @@ const servicesSwiper = new Swiper('.services-swiper', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
+    speed: 500,
+    loop:true,
+    spaceBetween: 30,
     slidesPerView: 'auto',
     coverflowEffect: {
       rotate: 0,
-      stretch: 0,
       depth: 0,
-      modifier: 2.5,
-    },
+      modifier: 2,
+      slideShadows: false,
+    
+  },
+
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

@@ -619,14 +619,6 @@ video {
   margin-right: auto;
 }
 
-.\!mb-16 {
-  margin-bottom: 4rem !important;
-}
-
-.\!mt-16 {
-  margin-top: 4rem !important;
-}
-
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -680,12 +672,16 @@ video {
   height: 14rem;
 }
 
-.h-\[24rem\] {
-  height: 24rem;
+.h-60 {
+  height: 15rem;
 }
 
-.h-\[30rem\] {
-  height: 30rem;
+.h-72 {
+  height: 18rem;
+}
+
+.h-\[24rem\] {
+  height: 24rem;
 }
 
 .h-\[600px\] {
@@ -709,10 +705,6 @@ video {
   height: 100%;
 }
 
-.h-\[20rem\] {
-  height: 20rem;
-}
-
 .\!w-52 {
   width: 13rem !important;
 }
@@ -725,20 +717,24 @@ video {
   width: 40rem !important;
 }
 
-.w-28 {
-  width: 7rem;
-}
-
 .w-36 {
   width: 9rem;
 }
 
-.w-40 {
-  width: 10rem;
+.w-48 {
+  width: 12rem;
 }
 
-.w-44 {
-  width: 11rem;
+.w-52 {
+  width: 13rem;
+}
+
+.w-56 {
+  width: 14rem;
+}
+
+.w-60 {
+  width: 15rem;
 }
 
 .w-fit {
@@ -748,6 +744,22 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-44 {
+  width: 11rem;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.\!w-\[35rem\] {
+  width: 35rem !important;
 }
 
 .cursor-pointer {
@@ -828,16 +840,8 @@ video {
   border-radius: 1.5rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
-.rounded-\[50\%_0_0_50\%\] {
-  border-radius: 50% 0 0 50%;
+.rounded-\[0_0_20\%_20\%\] {
+  border-radius: 0 0 20% 20%;
 }
 
 .rounded-\[20\%\] {
@@ -848,8 +852,12 @@ video {
   border-radius: 20% 20% 0 0;
 }
 
-.rounded-\[0_0_20\%_20\%\] {
-  border-radius: 0 0 20% 20%;
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border {
@@ -999,6 +1007,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
 .py-32 {
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -1012,11 +1025,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }
 
 .pb-12 {
@@ -1185,10 +1193,10 @@ body{
   overflow-x:hidden;
 }
 
-.swiper-slide-shadow-left,
+/* .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
   display: none;
-}
+} */
 
 .after\:\!text-xl::after {
   content: var(--tw-content);
