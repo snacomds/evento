@@ -6,13 +6,19 @@ const servicesSwiper = new Swiper('.services-swiper', {
     grabCursor: true,
     centeredSlides: true,
     loop: true,
+    speed: 500,
     slidesPerView: 'auto',
     coverflowEffect: {
       rotate: 0,
-      stretch: 0,
-      depth: 0,
-      modifier: 2.5,
-    },
+      depth: 500,
+      modifier: 0.5,
+      slideShadows: false,
+  },
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: 0
+},
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -24,9 +30,9 @@ const servicesSwiper = new Swiper('.services-swiper', {
   });
 
 
-  setInterval(()=>{
-    servicesSwiper.slideNext();
-  },10000);
+  // setInterval(()=>{
+  //   servicesSwiper.slideNext();
+  // },10000);
 
 
   const customersSwiper = new Swiper('.customers-swiper', {
