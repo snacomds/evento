@@ -672,20 +672,8 @@ video {
   height: 14rem;
 }
 
-.h-60 {
-  height: 15rem;
-}
-
-.h-72 {
-  height: 18rem;
-}
-
 .h-\[24rem\] {
   height: 24rem;
-}
-
-.h-\[600px\] {
-  height: 600px;
 }
 
 .h-\[60rem\] {
@@ -713,16 +701,16 @@ video {
   width: 18rem !important;
 }
 
-.\!w-\[40rem\] {
-  width: 40rem !important;
+.\!w-\[35rem\] {
+  width: 35rem !important;
 }
 
 .w-36 {
   width: 9rem;
 }
 
-.w-48 {
-  width: 12rem;
+.w-44 {
+  width: 11rem;
 }
 
 .w-52 {
@@ -744,22 +732,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-44 {
-  width: 11rem;
-}
-
-.w-28 {
-  width: 7rem;
-}
-
-.w-40 {
-  width: 10rem;
-}
-
-.\!w-\[35rem\] {
-  width: 35rem !important;
 }
 
 .cursor-pointer {
@@ -832,8 +804,8 @@ video {
   overflow: hidden;
 }
 
-.rounded-2xl {
-  border-radius: 1rem;
+.\!rounded-full {
+  border-radius: 9999px !important;
 }
 
 .rounded-3xl {
@@ -878,9 +850,8 @@ video {
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
-.border-indigo-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(99 102 241 / var(--tw-border-opacity));
+.border-transparent {
+  border-color: transparent;
 }
 
 .bg-\[\#191F2E\] {
@@ -929,6 +900,10 @@ video {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-tr {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
 .from-\[\#7F1CFC\] {
   --tw-gradient-from: #7F1CFC var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(127 28 252 / 0) var(--tw-gradient-to-position);
@@ -965,6 +940,23 @@ video {
 
 .bg-cover {
   background-size: cover;
+}
+
+.bg-clip-border {
+  background-clip: border-box;
+}
+
+.bg-clip-padding {
+  background-clip: padding-box;
+}
+
+.bg-clip-content {
+  background-clip: content-box;
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .p-12 {
@@ -1129,11 +1121,6 @@ video {
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
-.text-indigo-500 {
-  --tw-text-opacity: 1;
-  color: rgb(99 102 241 / var(--tw-text-opacity));
-}
-
 .text-inherit {
   color: inherit;
 }
@@ -1175,6 +1162,51 @@ video {
 
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.\[border-image\:linear-gradient\(to_top_right\2c \#FF1C60\2c \#7F1CFC\)_10_100\%\] {
+  -o-border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 10 100%;
+     border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 10 100%;
+}
+
+.\[border-image\:linear-gradient\(to_top_right\2c \#FF1C60\2c \#7F1CFC\)_1_100\%\] {
+  -o-border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 1 100%;
+     border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 1 100%;
+}
+
+.\[border-image\:linear-gradient\(to_top_right\2c \#FF1C60\2c \#7F1CFC\)_10_100\] {
+  -o-border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 10 100;
+     border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 10 100;
+}
+
+.\[border-image\:linear-gradient\(to_top_right\2c \#FF1C60\2c \#7F1CFC\)_100\] {
+  -o-border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 100;
+     border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 100;
+}
+
+.\[border-image\:linear-gradient\(to_top_right\2c \#FF1C60\2c \#7F1CFC\)_100\%\] {
+  -o-border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 100%;
+     border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 100%;
+}
+
+.\[border-image\:linear-gradient\(to_top_right\2c \#FF1C60\2c \#7F1CFC\)_10\] {
+  -o-border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 10;
+     border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 10;
+}
+
+.\[border-image\:linear-gradient\(to_top_right\2c \#FF1C60\2c \#7F1CFC\)_40\] {
+  -o-border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 40;
+     border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 40;
+}
+
+.\[border-image\:linear-gradient\(to_top_right\2c \#FF1C60\2c \#7F1CFC\)_20\] {
+  -o-border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 20;
+     border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) 20;
+}
+
+.\[border-image\:linear-gradient\(to_top_right\2c \#FF1C60\2c \#7F1CFC\)_border-box\] {
+  -o-border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) border-box;
+     border-image: linear-gradient(to top right,#FF1C60,#7F1CFC) border-box;
 }
 
 html {
