@@ -7,10 +7,8 @@ html {
   }
 *{
     font-family: "Cairo", sans-serif;
-    color:white;
 }
 body{
-    background:#13161E;
     width:100%;
     position: relative;
     overflow-x:hidden;
@@ -22,4 +20,11 @@ body{
 .swiper-slide-shadow-right {
   display: none;
 } */
+
+/* #4833cc */
+/* #150f3e  text */
+
+
+/* #edeafa  bg */
+/* #817e95  text */
 

@@ -855,6 +855,11 @@ video {
   border-style: solid;
 }
 
+.border-\[\#4833cc\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(72 51 204 / var(--tw-border-opacity));
+}
+
 .border-gray-700 {
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
@@ -868,6 +873,11 @@ video {
 .bg-\[\#191F2E\] {
   --tw-bg-opacity: 1;
   background-color: rgb(25 31 46 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#4833cc\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(72 51 204 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#F3F2F2\] {
@@ -941,10 +951,6 @@ video {
 
 .bg-cover {
   background-size: cover;
-}
-
-.bg-clip-border {
-  background-clip: border-box;
 }
 
 .p-12 {
@@ -1089,6 +1095,16 @@ video {
   color: rgb(19 22 30 / var(--tw-text-opacity));
 }
 
+.text-\[\#150f3e\] {
+  --tw-text-opacity: 1;
+  color: rgb(21 15 62 / var(--tw-text-opacity));
+}
+
+.text-\[\#4833cc\] {
+  --tw-text-opacity: 1;
+  color: rgb(72 51 204 / var(--tw-text-opacity));
+}
+
 .text-\[\#FF1C60\] {
   --tw-text-opacity: 1;
   color: rgb(255 28 96 / var(--tw-text-opacity));
@@ -1153,11 +1169,9 @@ html {
 
 *{
   font-family: "Cairo", sans-serif;
-  color:white;
 }
 
 body{
-  background:#13161E;
   width:100%;
   position: relative;
   overflow-x:hidden;
@@ -1167,6 +1181,14 @@ body{
 .swiper-slide-shadow-right {
   display: none;
 } */
+
+/* #4833cc */
+
+/* #150f3e  text */
+
+/* #edeafa  bg */
+
+/* #817e95  text */
 
 .after\:\!text-xl::after {
   content: var(--tw-content);
@@ -1178,8 +1200,30 @@ body{
   border-style: none;
 }
 
+.hover\:bg-\[\#4733ccc4\]:hover {
+  background-color: #4733ccc4;
+}
+
+.hover\:bg-\[\#f8f7fd\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 247 253 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-\[\#ff1c60a2\]:hover {
   background-color: #ff1c60a2;
+}
+
+.hover\:bg-\[\#edeafa\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 234 250 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[rgba\(72\2c 51\2c 204\2c 0\.04\)\]:hover {
+  background-color: rgba(72,51,204,0.04);
+}
+
+.hover\:bg-\[rgba\(72\2c 51\2c 204\2c 0\.06\)\]:hover {
+  background-color: rgba(72,51,204,0.06);
 }
 
 .hover\:bg-gradient-to-tr:hover {
@@ -1210,5 +1254,10 @@ body{
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-\[\#4833cc\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(72 51 204 / var(--tw-text-opacity));
 }
 
