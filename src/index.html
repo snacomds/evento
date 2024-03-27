@@ -28,72 +28,76 @@
 </head>
 
 <body>
-    <div dir="ltr" aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-25 z-0 ">
-        <div class="blur-[106px] h-32 bg-gradient-to-r from-[#7F1CFC] to-[#59DCDC] "></div>
+    <div  aria-hidden="true" class="absolute h-screen justify-between items-center inset-0 grid grid-cols-2 -space-x-52  z-0 ">
+        <div class="blur-[150px] mt-auto w-1/4 h-1/2 bg-gradient-to-r from-[#4833cc] to-[rgb(176,28,255)] opacity-40"></div>   
+             <div class="w-full h-full flex items-center justify-end">
+            <div class="blur-[150px] w-1/3 h-1/2 bg-gradient-to-r from-[#4833cc] to-[rgb(176,28,255)] opacity-20"></div>
+        </div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="relative w-full top-0 z-10">
-        <div class="flex justify-between container mx-auto items-center pt-8 pb-4 z-10">
-            <div class="flex gap-20 items-center">
-                <a href="#" class="font-['Oswald'] text-[#150f3e] cursor-pointer text-3xl">evento</a>
-                <div class="flex gap-8 items-center">
-                    <a href="#services" class="hover:text-[#4833cc]  transition ease-in">خدماتنا</a>
-                    <a href="#articles" class="hover:text-[#4833cc] transition ease-in">مقالات</a>
-                    <a href="#" class="hover:text-[#4833cc] transition ease-in">عن ايفانتو</a>
+            <!-- Navbar -->
+            <nav class="sticky w-full top-0 z-50 bg-white border-b boreder-solid boreder-[#817e95]">
+                <div class="flex justify-between container mx-auto items-center pt-6 pb-6 z-10">
+                    <div class="flex gap-20 items-center">
+                        <a href="#" class="font-['Oswald'] text-[#150f3e] cursor-pointer text-3xl">evento</a>
+                        <div class="flex gap-8 items-center">
+                            <a href="#services" class="hover:text-[#4833cc]  transition ease-in">خدماتنا</a>
+                            <a href="#articles" class="hover:text-[#4833cc] transition ease-in">مقالات</a>
+                            <a href="#" class="hover:text-[#4833cc] transition ease-in">عن ايفانتو</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex gap-2 items-center justify-start py-2 px-4">
+                            <label for="search" class="ti ti-search"></label>
+                            <input class="bg-transparent outline-none" id="search" type="text" placeholder="بحث في الموقع">
+                        </div>
+                        
+                            <button
+                                class="pointer-events-auto cursor-pointer !rounded-full px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-[#4833cc] border border-[#4833cc]  hover:bg-[rgba(72,51,204,0.06)] ">تسجيل</button>
+                        
+                        <div
+                            class="pointer-events-auto cursor-pointer  rounded-full bg-[#4833cc] px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-[#4733ccc4]">
+                            تسجيل الدخول</div>
+                    </div>
                 </div>
-            </div>
-            <div class="flex items-center gap-4">
-                <div class="flex gap-2 items-center justify-start py-2 px-4">
-                    <label for="search" class="ti ti-search"></label>
-                    <input class="bg-transparent outline-none" id="search" type="text" placeholder="بحث في الموقع">
-                </div>
-                
-                    <button
-                        class="pointer-events-auto cursor-pointer !rounded-full px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-[#4833cc] border border-[#4833cc]  hover:bg-[rgba(72,51,204,0.06)] ">تسجيل</button>
-                
-                <div
-                    class="pointer-events-auto cursor-pointer  rounded-full bg-[#4833cc] px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-[#4733ccc4]">
-                    تسجيل الدخول</div>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End-->
+            </nav>
+            <!-- Navbar End-->
 
 
-    <!-- Hero -->
-    <section class="relative container mx-auto w-full grid grid-cols-2 gap-12 items-center z-10 ">
-        <div class="col-span-1 flex flex-col gap-8">
-            <h1 class="text-white text-6xl leading-snug font-bold block">احصل على ما تريد ومن أي مكان تريد</h1>
-            <div class="flex gap-4">
-                <div class="rounded-full bg-gradient-to-tr from-[#FF1C60] to-[#7F1CFC] p-[1px]">
+
+    
+    
+        <!-- Hero -->
+        <section class="relative container mx-auto h-screen w-full grid grid-cols-2 gap-12  items-center z-10 ">
+            <div class="flex flex-col gap-8 items-start col-span-1">
+                <h1 class="text-6xl leading-snug font-bold block">احصل على ما تريد ومن أي مكان تريد</h1>
+                <p class="text-[#514f5f] text-lg">عالم من الإمكانيات تحت تصرفك. من مختلف المجالات والخدمات ، نُقدم لك خدمات متنوعة تُساعدك على تحويل أفكارك إلى واقع مدهش.</p>
+                <div class="flex gap-4">
+                   
+                        <button
+                        class="pointer-events-auto cursor-pointer !rounded-full px-8 py-4 text-[1.3rem] font-semibold leading-5 text-[#4833cc] border border-[#4833cc]  hover:bg-[rgba(72,51,204,0.06)] ">اطلب
+                            خدمتك</button>
+                   
+    
                     <button
-                        class="pointer-events-auto cursor-pointer bg-[#13161E] !rounded-full px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-[#FF1C60] hover:text-white hover:bg-gradient-to-tr hover:from-[#FF1C60] hover:to-[#7F1CFC] ">اطلب
+                    class="pointer-events-auto cursor-pointer  rounded-full bg-[#4833cc] px-8 py-4 text-[1.3rem] font-semibold leading-5 text-white hover:bg-[#4733ccc4]">أضف
                         خدمتك</button>
                 </div>
-
-                <button
-                    class="pointer-events-auto cursor-pointer  rounded-full bg-gradient-to-tr from-[#FF1C60] to-[#7F1CFC] px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-[#ff1c60a2] hover:bg-gradient-to-tr hover:from-[#ff1c60a4] hover:to-[#7F1CFC]">أضف
-                    خدمتك</button>
             </div>
-        </div>
-        <div class="col-span-1 py-8">
-            <img class="ms-auto w-10/12" src="./assets/photos/hero.png" alt="">
-        </div>
-    </section>
-    <!-- Hero End-->
+            <div class="col-span-1 py-8">
+                <img class="ms-auto w-10/12" src="./assets/photos/hero.svg" alt="">
+            </div>
+        </section>
+        <!-- Hero End-->
+
 
     <!-- Services -->
     <section id="services" class="h-[60rem] flex flex-col justify-center relative w-full  ">
-        <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-20 z-0 ">
 
-            <div class="blur-[106px] h-56 bg-gradient-to-br from-[#7F1CFC] to-purple-400 "></div>
-        </div>
         <h2 class="container mx-auto text-center font-bold text-3xl mb-8">خدماتنا</h2>
 
 
         <div class="services-swiper container mx-auto relative">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div
@@ -201,10 +205,6 @@
 
             </div>
 
-
-            <!-- If we need navigation buttons -->
-            <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
 
         </div>
 
