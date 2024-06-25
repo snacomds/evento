@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./fonts/fonts.css";
+
 html {
     scroll-behavior: smooth;
     font-size:14px;
   }
 *{
-    font-family: "Cairo", sans-serif;
+    font-family: "Arial Rounded MT", sans-serif;
 }
 body{
     width:100%;
