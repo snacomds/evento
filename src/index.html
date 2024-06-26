@@ -102,9 +102,9 @@
 
 
     <!-- Hero -->
-    <section class="relative h-screen w-full z-10">
-        <div class="relative w-full h-fit">
-            <img class="w-full h-auto object-cover" src="./assets/photos/hero.jpg" alt="">
+    <section class="relative w-full z-10">
+        <div class="relative w-full h-[50vh]">
+            <img class="w-full h-full object-fill" src="./assets/photos/hero.jpg" alt="">
 
             <div class=" absolute w-full h-full flex flex-col justify-center items-center top-0">
                 <h1 class=" text-5xl text-white/80 shadow-md text-center ">Get the most
@@ -140,8 +140,37 @@
     </section>
     <!-- Hero End-->
 
-    
+    <!-- Services -->
+    <section x-data="{ services : [
+        {title:'Digital Marketing', image:'./assets/photos/digital-marketing.png'},
+        {title:'Programmer', image:'./assets/photos/programmer.png'},
+        {title:'Photographer', image:'./assets/photos/photographer.png'},
+        {title:'Cooker Room', image:'./assets/photos/cooker-room.png'},
+        {title:'Driver', image:'./assets/photos/driver.png'},
+        {title:'Accountanting', image:'./assets/photos/accountanting.png'},
+        {title:'Web Design', image:'./assets/photos/web-design.png'},
+        ]}" class="py-8">
+        <div class="swiper services-swiper">
+            <div class="swiper-wrapper !h-[29rem]">
 
+                <template x-for="service in services">
+                    <div class="swiper-slide !w-[30rem] !h-[27rem]">
+
+                        <div class="w-full h-full flex flex-col gap-2 justify-start">
+                            <h4 x-text="service.title" class="font-light text-[#222222]"></h4>
+                            <div class="rounded-md overflow-hidden w-full h-full">
+                                <img class="w-full h-full object-cover" :src="service.image" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </section>
+
+    <!-- Services End -->
 
 
 
