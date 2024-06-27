@@ -173,7 +173,33 @@
     <!-- Services End -->
 
 
+    <!-- Categories -->
+    <section x-data="{ categories:[
+        {title:'Technical',icon:'./assets/categories/technical.svg'},
+        {title:'Home & Garden',icon:'./assets/categories/home-garden.svg'},
+        {title:'Business & Services',icon:'./assets/categories/business-services.svg'},
+        {title:'Staff',icon:'./assets/categories/staff.svg'},
+        {title:'Event',icon:'./assets/categories/event.svg'},
+        {title:'photo & video',icon:'./assets/categories/photo-video.svg'},
+        {title:'Others',icon:'./assets/categories/others.svg'},
+        ]}" class="py-[6rem] container mx-auto flex flex-col justify-center items-center gap-8">
 
+        <h3 class="text-4xl">Categories</h3>
+        <div class="flex w-full justify-between py-12">
+            <template x-for="category in categories">
+                <div class="flex flex-col items-center justify-center gap-4 w-[7rem]">
+                    <img class="w-14 h-14" :src="category.icon" :alt="category.title">
+                    <span class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+
+                        <p class="text-center text-xl" x-text="category.title"></p>
+                    </span>
+                </div>
+            </template>
+        </div>
+
+    </section>
+
+    <!-- Categories End -->
 
 
     <!-- Footer-->
