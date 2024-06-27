@@ -36,7 +36,7 @@
     <nav class="sticky w-full top-0 z-50 bg-white border-b boreder-solid boreder-[#817e95] h-[5.5rem]">
         <div class="container mx-auto relative h-full flex justify-between items-center z-10">
             <div class="flex gap-4 items-center">
-                <div class="h-[4.2rem]">
+                <div class="h-[2rem]">
                     <img class="h-full" width="auto" src="./assets/logo/logo.svg" alt="evento">
                 </div>
                 <div x-data="{ visible: false }" class="relative inline-block text-left">
@@ -141,7 +141,7 @@
     <!-- Hero End-->
 
     <!-- Services -->
-    <section x-data="{ services : [
+    <section id="services" x-data="{ services : [
         {title:'Digital Marketing', image:'./assets/photos/digital-marketing.png'},
         {title:'Programmer', image:'./assets/photos/programmer.png'},
         {title:'Photographer', image:'./assets/photos/photographer.png'},
@@ -203,7 +203,7 @@
     <!-- Categories End -->
 
     <!-- How it Works -->
-    <section x-data="{ steps:[
+    <section id="how-it-works" x-data="{ steps:[
             {id:1,title:'Create an account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/create.svg'},
             {id:2,title:'Choose the service',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/service.svg'},
             {id:3,title:'Choose the best price',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/price.svg'},
@@ -290,8 +290,88 @@
     <!-- CTA End-->
 
     <!-- Footer-->
-    <footer class="container mx-auto relative">
-        footer
+    <footer class="container mx-auto relative py-44">
+        <div class="flex justify-between items-start">
+            <div class="flex flex-col gap-4">
+                <div class="h-[3rem]">
+                    <img class="h-full" width="auto" src="./assets/logo/logo.svg" alt="evento">
+                </div>
+                <div class="w-full flex justify-between gap-2">
+                    <a href="#"
+                        class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
+                        <i class="ti ti-brand-facebook text-white text-2xl "></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
+                        <i class="ti ti-brand-linkedin text-white text-2xl "></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
+                        <i class="ti ti-brand-github text-white text-2xl "></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
+                        <i class="ti ti-brand-x text-white text-2xl "></i>
+                    </a>
+
+                    <a href="#"
+                        class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
+                        <i class="ti ti-brand-instagram text-white text-2xl "></i>
+                    </a>
+
+                </div>
+
+                <p class="mt-12">© 2024 All rights reserved.</p>
+            </div>
+
+            <div class="flex gap-16">
+                <div class="flex flex-col gap-4 items-start">
+                    <h5 class="text-2xl">Quick links</h5>
+                    <div class="flex flex-col gap-4 items-start text-[#747474]">
+                        <a href="#">Home</a>
+                        <a href="#">About us</a>
+                        <a href="#services">Services</a>
+                        <a href="#">Contact us</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4 items-start">
+                    <h5 class="text-2xl">About</h5>
+                    <div class="flex flex-col gap-4 items-start text-[#747474]">
+                        <a href="#how-it-works">How It Works</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4 items-start">
+                    <h5 class="text-2xl">Help Centre</h5>
+                    <div class="flex flex-col gap-4 items-start text-[#747474]">
+                        <a href="#">Payments</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Product returns</a>
+                        <a href="#">Checkout</a>
+                        <a href="#">other Issues</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4 items-start">
+                    <h5 class="text-2xl">Our newsletter</h5>
+                    <p class="text-start">Subscribe to our newsletter to get updates about our offers.</p>
+
+                    <div class="w-full h-fit mt-12">
+                        <div class="relative rounded-md shadow-sm flex">
+                            <input type="email" name="email"
+                                class="block w-full rounded-l-md border-0 py-4 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                placeholder="Your email address">
+                            <button
+                                class="pointer-events-auto cursor-pointer rounded-r-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-4 font-semibold leading-5 text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
     <!-- Footer End-->
     <script type="module" src="./assets/index.js"></script>
