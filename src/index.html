@@ -187,7 +187,7 @@
         <h3 class="text-4xl">Categories</h3>
         <div class="flex w-full justify-between py-12">
             <template x-for="category in categories">
-                <div class="flex flex-col items-center justify-center gap-4 w-[7rem]">
+                <div class="flex flex-col items-center justify-start gap-4 w-[7rem]">
                     <img class="w-14 h-14" :src="category.icon" :alt="category.title">
                     <span class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
 
@@ -200,6 +200,42 @@
     </section>
 
     <!-- Categories End -->
+
+        <!-- How it Works -->
+        <section x-data="{ steps:[
+            {id:1,title:'Create an account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/create.svg'},
+            {id:2,title:'Choose the service',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/service.svg'},
+            {id:3,title:'Choose the best price',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/price.svg'},
+            {id:4,title:'Create your account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/account.svg'}
+            
+            ]}" class="py-[6rem] container mx-auto flex flex-col justify-center items-center gap-8">
+    
+            <h3 class="text-4xl">How it Works</h3>
+            <div class="flex w-full gap-4 justify-between py-12">
+                <template x-for="step in steps">
+                    <div class="flex flex-col items-center justify-start p-4 gap-4 w-full border border-[#97979781] rounded-md">
+                        <div class="flex items-center justify-between w-full">
+                            <span class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+                                <p x-text="step.id" class="text-center text-8xl"></p>
+                            </span>
+                            <span class="">
+                                <img :src="step.icon" :alt="step.title">
+                            </span>
+                        </div>
+                        <div class="flex flex-col gap-4 text-start items-start">
+                            <span class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+
+                            <h5 class="text-2xl" x-text="step.title"></h5>
+                            </span>
+                            <p x-text="step.description"></p>
+                        </div>
+                    </div>
+                </template>
+            </div>
+    
+        </section>
+    
+        <!-- How it Works End -->
 
 
     <!-- Footer-->
