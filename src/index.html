@@ -189,7 +189,8 @@
             <template x-for="category in categories">
                 <div class="flex flex-col items-center justify-start gap-4 w-[7rem]">
                     <img class="w-14 h-14" :src="category.icon" :alt="category.title">
-                    <span class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+                    <span
+                        class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
 
                         <p class="text-center text-xl" x-text="category.title"></p>
                     </span>
@@ -201,85 +202,97 @@
 
     <!-- Categories End -->
 
-        <!-- How it Works -->
-        <section x-data="{ steps:[
+    <!-- How it Works -->
+    <section x-data="{ steps:[
             {id:1,title:'Create an account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/create.svg'},
             {id:2,title:'Choose the service',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/service.svg'},
             {id:3,title:'Choose the best price',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/price.svg'},
             {id:4,title:'Create your account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/account.svg'}
             
             ]}" class="py-[6rem] container mx-auto flex flex-col justify-center items-center gap-8">
-    
-            <h3 class="text-4xl">How it Works</h3>
-            <div class="flex w-full gap-4 justify-between py-12">
-                <template x-for="step in steps">
-                    <div class="flex flex-col items-center justify-start p-4 gap-4 w-full border border-[#97979781] rounded-md">
-                        <div class="flex items-center justify-between w-full">
-                            <span class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
-                                <p x-text="step.id" class="text-center text-8xl"></p>
-                            </span>
-                            <span class="">
-                                <img :src="step.icon" :alt="step.title">
-                            </span>
-                        </div>
-                        <div class="flex flex-col gap-4 text-start items-start">
-                            <span class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+
+        <h3 class="text-4xl">How it Works</h3>
+        <div class="flex w-full gap-4 justify-between py-12">
+            <template x-for="step in steps">
+                <div
+                    class="flex flex-col items-center justify-start p-4 gap-4 w-full border border-[#97979781] rounded-md">
+                    <div class="flex items-center justify-between w-full">
+                        <span
+                            class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+                            <p x-text="step.id" class="text-center text-8xl"></p>
+                        </span>
+                        <span class="">
+                            <img :src="step.icon" :alt="step.title">
+                        </span>
+                    </div>
+                    <div class="flex flex-col gap-4 text-start items-start">
+                        <span
+                            class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
 
                             <h5 class="text-2xl" x-text="step.title"></h5>
-                            </span>
-                            <p x-text="step.description"></p>
-                        </div>
+                        </span>
+                        <p x-text="step.description"></p>
                     </div>
-                </template>
-            </div>
-    
-        </section>
-    
-        <!-- How it Works End -->
+                </div>
+            </template>
+        </div>
 
+    </section>
+
+    <!-- How it Works End -->
+
+
+
+    <!-- Our Partners -->
+    <section
+        x-data="{partners:['./assets/partners/1.svg','./assets/partners/2.svg','./assets/partners/3.svg','./assets/partners/4.svg','./assets/partners/5.svg']}"
+        class="bg-[#EDEDEF] py-12">
+        <h3 class="text-4xl text-center">Our Partners</h3>
+
+        <div class="container mx-auto flex w-full gap-4 justify-between py-12">
+            <template x-for="partner in partners ">
+                <div class="rounded-md overflow-hidden border">
+                    <img :src="partner" alt="partner">
+                </div>
+            </template>
+        </div>
+
+
+    </section>
+    <!-- Our Partners End-->
+
+
+
+    <!-- CTA -->
+    <section class=" bg-[#EDEDEF] py-12">
+
+        <div class="container mx-auto grid grid-cols-2 gap-8">
+            <h3 class="text-4xl text-start">Sign Up for our <br /> newsletter and never <br /> miss any offers</h3>
+            <div class="flex flex-col gap-4 items-center justify-center ms-auto w-2/3">
+                <div class="w-full h-fit">
+                    <div class="relative rounded-md shadow-sm">
+                        <input type="email" name="email" id="email"
+                            class="block w-full rounded-md border-0 py-4 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            placeholder="Your email address">
+                    </div>
+                </div>
+                <button
+                    class="w-full pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-4 font-semibold leading-5 text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block">Subscribe
+                    now</button>
+
+            </div>
+        </div>
+
+
+
+
+    </section>
+    <!-- CTA End-->
 
     <!-- Footer-->
-    <!-- <footer class="container mx-auto relative">
-        <div class="flex flex-col pt-12 gap-20 divide-y divide-[#0E121B]">
-            <div class="flex justify-between itema-center gap-8">
-                <div class="flex flex-col gap-8 items-start">
-                    <a href="#" class="font-['Oswald'] text-white cursor-pointer text-2xl">evento</a>
-                    <div class="flex gap-8">
-                        <a href="#services" class="hover:text-[#FF1C60]  transition ease-in">خدماتنا</a>
-                        <a href="#articles" class="hover:text-[#FF1C60] transition ease-in">مقالات</a>
-                        <a href="#" class="hover:text-[#FF1C60] transition ease-in">عن ايفانتو</a>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 items-end">
-                    <div class="flex flex-col gap-2 items-start">
-                        <label for="search" class="text-white">آخر الأخبار</label>
-                        <div class="flex flex-col gap-2 items-center justify-start bg-white rounded-full py-2 px-8">
-                            <input class="bg-transparent outline-none w-full text-black" id="search" type="text"
-                                placeholder="Email Address">
-                        </div>
-                    </div>
-                    <div>
-                        <button
-                class="pointer-events-auto cursor-pointer rounded-full bg-gradient-to-tr from-[#FF1C60] to-[#7F1CFC] px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-[#ff1c60a2] hover:bg-gradient-to-tr hover:from-[#ff1c60a4] hover:to-[#7F1CFC]">
-                    اشتراك</button>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="flex justify-between items-center py-8 mb-6">
-                <div class="flex gap-8">
-                    <a href="#">Terms</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Cookies</a>
-                </div>
-                <p dir="ltr">© 2024 All rights reserved.</p>
-            </div>
-
-        </div>
-    </footer> -->
+    <footer class="container mx-auto relative">
+        footer
+    </footer>
     <!-- Footer End-->
     <script type="module" src="./assets/index.js"></script>
     <!-- Tabler icons set -->
