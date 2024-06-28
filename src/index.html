@@ -263,7 +263,54 @@
     </section>
     <!-- Our Partners End-->
 
+    <!-- Customer opinions -->
 
+    <section class="container mx-auto py-16" x-data="{ opinions : [
+        { user:'Hussam saleh', career :'Co-founder', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/1.png' },
+        { user:'mohmmed ali', career :'Design director', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/2.png' },
+        { user:'ahmed moha', career :'web designer', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/3.png' }
+        ]}">
+        <div class="flex justify-between items-center">
+            <div></div>
+            <h3 class="text-4xl">Customer opinions</h3>
+            <a href="#">Our Client</a>
+
+
+
+        </div>
+
+        <div class="py-12">
+
+            <div class="swiper customer-opinions">
+                <div class="swiper-wrapper ">
+                    <template x-for="opinion in opinions">
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-8 items-center bg-white mx-56 min-h-36 text-start relative">
+                                <div class="absolute left-0">
+                                    <img src="./assets/customers/left-quote.svg">
+                                </div>
+                                <p class="p-8" x-text="opinion.opinion"></p>
+
+                                <div class="flex items-center gap-4">
+                                    <img :src="opinion.photo" :alt="opinion.user">
+                                    <div class="flex flex-col gap-2 justify-start p-4">
+                                        <p x-text="opinion.user"></p>
+                                        <p class="text-[#F16623]" x-text="opinion.career"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                <div class="relative w-full flex justify-center px-8">
+                    <div class="swiper-pagination">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer opinions End -->
 
 
     <!-- Latest blog posts -->
@@ -279,7 +326,7 @@
             <a href="#">More Blogs</a>
         </div>
 
-        <div class="grid grid-cols-3 items-center gap-6">
+        <div class="grid grid-cols-3 items-center gap-6 py-12">
 
             <template x-for="post in posts">
                 <div class="shadow-md w-full h-full flex flex-col rounded-md overflow-hidden">
