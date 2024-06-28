@@ -243,6 +243,8 @@
 
 
 
+
+
     <!-- Our Partners -->
     <section
         x-data="{partners:['./assets/partners/1.svg','./assets/partners/2.svg','./assets/partners/3.svg','./assets/partners/4.svg','./assets/partners/5.svg']}"
@@ -262,6 +264,57 @@
     <!-- Our Partners End-->
 
 
+
+
+    <!-- Latest blog posts -->
+
+    <section class="container mx-auto py-12" x-data="{ posts : [
+        {title:'secret behind being creative without any strategy', date:'12 jul, 2024', category:'Design', image:'./assets/blog/1.png'},
+        {title:'The simpliest form of design Gives minimalism look', date:'12 jul, 2024', category:'Design', image:'./assets/blog/2.png'},
+        {title:'Being creative while inventing ideas is quick startup', date:'12 jul, 2025', category:'Business', image:'./assets/blog/3.png'},
+        ]}">
+        <div class="flex justify-between items-center">
+            <div></div>
+            <h3 class="text-4xl">Latest blog posts</h3>
+            <a href="#">More Blogs</a>
+        </div>
+
+        <div class="grid grid-cols-3 items-center gap-6">
+
+            <template x-for="post in posts">
+                <div class="shadow-md w-full h-full flex flex-col rounded-md overflow-hidden">
+                    <div class="w-full h-[20rem] top-0 start-0">
+                        <img class="w-full h-full object-cover" :src="post.image" :alt="post.title">
+                    </div>
+                    <div class="p-4 flex flex-col gap-2">
+                        <div class="flex gap-4">
+                            <span
+                                class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+                                <p class="uppercase text-sm" x-text="post.date"></p>
+                            </span>
+
+                            <span
+                                class="bg-gradient-to-r from-[#CE4F57] to-[#92298D] inline-block text-transparent bg-clip-text">
+                                <i class="ti ti-point text-sm"></i>
+                            </span>
+
+                            <span
+                                class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+                                <p class="uppercase text-sm" x-text="post.category"></p>
+                            </span>
+
+                        </div>
+
+                        <h5 class="text-lg" x-text="post.title"></h5>
+                    </div>
+                </div>
+
+            </template>
+
+        </div>
+    </section>
+
+    <!-- Latest blog posts End -->
 
     <!-- CTA -->
     <section class=" bg-[#EDEDEF] py-12">
