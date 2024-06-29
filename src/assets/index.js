@@ -22,32 +22,8 @@ const servicesSwiper = new Swiper('.services-swiper', {
 });
 
 
-const customerOpinionsSwiper = new Swiper('.customer-opinions', {
-  initialSlide:2,
-  slidesPerView: 1,
-  centeredSlides: true,
-  grabCursor: true,
-  loop: true,
-  pagination: { 
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      // shadow: true,
-      translate: ["-120%", 0, -500],
-    },
-    next: {
-      // shadow: true,
-      translate: ["120%", 0, -500],
-    },
-  },
-//   autoplay: {
-//     delay: 3000,
-//     pauseOnMouseEnter: true,
-//     disableOnInteraction: 0
-// },
-});
+// setInterval(()=>{
+//   servicesSwiper.slideNext();
+// },10000);
 
 

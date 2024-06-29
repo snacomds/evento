@@ -23,6 +23,9 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <link href="https://fonts.cdnfonts.com/css/arial-mt" rel="stylesheet">
+
+
 
     <title>Evanto</title>
 
@@ -33,16 +36,16 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="sticky w-full top-0 z-50 bg-white border-b boreder-solid boreder-[#817e95] h-[5.5rem]">
-        <div class="container mx-auto relative h-full flex justify-between items-center z-10">
+    <nav class="sticky w-full top-0 z-50 bg-white border-b boreder-solid boreder-[#817e95] h-[5.5rem] max-sm:h-[3rem]">
+        <div class="container mx-auto relative h-full flex justify-between items-center z-10 max-sm:px-4">
             <div class="flex gap-4 items-center">
-                <div class="h-[2rem]">
+                <div class="h-[2rem] max-sm:h-[1.5rem]">
                     <img class="h-full" width="auto" src="./assets/logo/logo.svg" alt="evento">
                 </div>
                 <div x-data="{ visible: false }" class="relative inline-block text-left">
                     <div>
                         <button @click="visible = !visible" type="button"
-                            class="flex w-full justify-center items-center gap-x-1.5 rounded-md text-xl font-black bg-white px-3 py-2  text-gray-900  hover:bg-gray-50"
+                            class="flex w-full justify-center items-center gap-x-1.5 rounded-md text-xl font-mtb font-light bg-white px-3 py-2  text-gray-900  hover:bg-gray-50 max-sm:text-base"
                             id="menu-button" aria-expanded="true" aria-haspopup="true">
                             Services
                             <i class="ti ti-chevron-down"></i>
@@ -66,7 +69,7 @@
                             <template x-for="(action,index) in actions">
 
                                 <a href="#"
-                                    class="block flex gap-2 items-center pointer-events-auto cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md "
+                                    class="block flex gap-4 items-center pointer-events-auto cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md "
                                     role="menuitem" tabindex="-1" id="menu-item-0">
                                     <span class="p-2 bg-[#92298f2c] rounded-md ">
                                         <span
@@ -75,7 +78,7 @@
                                             <i :class="`${action.icon} text-[1.1rem] `"></i>
                                         </span>
                                     </span>
-                                    <span class="text-[#747474]" x-text="action.title"></span>
+                                    <span class="text-[#747474] text-[1.1rem]" x-text="action.title"></span>
                                 </a>
                             </template>
                         </div>
@@ -85,10 +88,12 @@
 
             <div class="flex items-center gap-4">
                 <button
-                    class="pointer-events-auto cursor-pointer font-semibold leading-5 hover:text-[#92298D]">Login</button>
+                type="button"
+                    class="pointer-events-auto cursor-pointer font-mtb font-semibold hover:text-[#92298D] max-sm:text-xs">Login</button>
 
                 <button
-                    class="pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-4 font-semibold leading-5 text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block">Join
+                type="button"
+                    class="pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-2 font-mtb   text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block max-sm:text-xs max-sm:py-[0.3rem] max-sm:px-4 max-sm:rounded-full">Join
                     us</button>
 
             </div>
@@ -102,22 +107,22 @@
 
 
     <!-- Hero -->
-    <section class="relative w-full z-10">
+    <section class="w-full z-10">
         <div class="relative w-full h-[50vh]">
             <img class="w-full h-full object-fill" src="./assets/photos/hero.jpg" alt="">
 
             <div class=" absolute w-full h-full flex flex-col justify-center items-center top-0">
-                <h1 class=" text-5xl text-white/80 shadow-md text-center ">Get the most
+                <h1 class=" text-6xl font-mtb text-white/80 shadow-md text-center ">Get the most
                     <br />
                     out of Evantto
                 </h1>
 
-                <p class="mt-16 opacity-70 text-center text-white/70">Beyond your expectations </p>
+                <p class="mt-16 opacity-80 text-3xl text-center text-white shadow-md">Beyond your expectations </p>
 
-                <div class="w-[40rem] h-fit">
-                    <div class="relative mt-2 rounded-md shadow-sm">
+                <div class="w-[36rem]  mt-8">
+                    <div class="relative rounded-xl shadow-sm">
                         <input type="text" name="search" id="search"
-                            class="block w-full rounded-md border-0 py-4 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            class="block w-full rounded-xl border-0 py-6 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             placeholder="Items, collections and creators">
                         <div class="absolute inset-y-0 right-0 p-4 flex items-center">
                             <label for="category" class="sr-only">Category</label>
@@ -157,7 +162,7 @@
                     <div class="swiper-slide !w-[30rem] !h-[27rem]">
 
                         <div class="w-full h-full flex flex-col gap-2 justify-start">
-                            <h4 x-text="service.title" class="font-light text-[#222222]"></h4>
+                            <h4 x-text="service.title" class="text-xl text-[#222222]"></h4>
                             <div class="rounded-md overflow-hidden w-full h-full">
                                 <img class="w-full h-full object-cover" :src="service.image" alt="">
                             </div>

@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{html,js}",],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        mt:["Arial Rounded MT", "sans-serif"],
+        mtb:["Arial Rounded MT Bold", "sans-serif"],
+
+      }
+    },
   },
   plugins: [],
 }
