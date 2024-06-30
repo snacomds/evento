@@ -156,10 +156,10 @@
         {title:'Web Design', image:'./assets/photos/web-design.png'},
         ]}" class="py-8">
         <div class="swiper services-swiper">
-            <div class="swiper-wrapper !h-[29rem]">
+            <div class="swiper-wrapper !h-[29rem] max-sm:!h-[24rem]">
 
                 <template x-for="service in services">
-                    <div class="swiper-slide !w-[30rem] !h-[27rem]">
+                    <div class="swiper-slide !w-[30rem] !h-[27rem] max-sm:!w-[24rem] max-sm:!h-[22rem]">
 
                         <div class="w-full h-full flex flex-col gap-2 justify-start">
                             <h4 x-text="service.title" class="text-xl text-[#222222]"></h4>
@@ -189,10 +189,10 @@
         {title:'Others',icon:'./assets/categories/others.svg'},
         ]}" class="py-[6rem] container mx-auto flex flex-col justify-center items-center gap-8">
 
-        <h3 class="text-4xl">Categories</h3>
-        <div class="flex w-full justify-between py-12">
+        <h3 class="text-4xl font-mtb max-sm:text-3xl">Categories</h3>
+        <div class="grid grid-cols-7 justify-center place-items-center gap-8 w-full py-12 max-sm:grid-cols-2 max-sm:w-4/6 ">
             <template x-for="category in categories">
-                <div class="flex flex-col items-center justify-start gap-4 w-[7rem]">
+                <div class="flex flex-col items-center justify-start gap-4 w-[7rem] ">
                     <img class="w-14 h-14" :src="category.icon" :alt="category.title">
                     <span
                         class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
