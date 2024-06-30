@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import "./fonts/fonts.css"; */
-
-
-
 
 html {
     scroll-behavior: smooth;

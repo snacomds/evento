@@ -37,7 +37,7 @@
 <body>
     <!-- Navbar -->
     <nav class="sticky w-full top-0 z-50 bg-white border-b boreder-solid boreder-[#817e95] h-[5.5rem] max-sm:h-[3rem]">
-        <div class="container mx-auto relative h-full flex justify-between items-center z-10 max-sm:px-4">
+        <div class="container mx-auto px-8 relative h-full flex justify-between items-center z-10 ">
             <div class="flex gap-4 items-center">
                 <div class="h-[2rem] max-sm:h-[1.5rem]">
                     <img class="h-full" width="auto" src="./assets/logo/logo.svg" alt="evento">
@@ -87,12 +87,10 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <button
-                type="button"
+                <button type="button"
                     class="pointer-events-auto cursor-pointer font-mtb font-semibold hover:text-[#92298D] max-sm:text-xs">Login</button>
 
-                <button
-                type="button"
+                <button type="button"
                     class="pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-2 font-mtb   text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block max-sm:text-xs max-sm:py-[0.3rem] max-sm:px-4 max-sm:rounded-full">Join
                     us</button>
 
@@ -117,7 +115,8 @@
                     out of Evantto
                 </h1>
 
-                <p class="mt-16 opacity-80 text-3xl text-center text-white shadow-md max-sm:text-2xl">Beyond your expectations </p>
+                <p class="mt-16 opacity-80 text-3xl text-center text-white shadow-md max-sm:text-2xl">Beyond your
+                    expectations </p>
 
                 <div class="w-[36rem]  mt-8 max-sm:w-full max-sm:px-6">
                     <div class="relative rounded-xl shadow-sm">
@@ -187,17 +186,18 @@
         {title:'Event',icon:'./assets/categories/event.svg'},
         {title:'photo & video',icon:'./assets/categories/photo-video.svg'},
         {title:'Others',icon:'./assets/categories/others.svg'},
-        ]}" class="py-[6rem] container mx-auto flex flex-col justify-center items-center gap-8">
+        ]}" class="py-32 container mx-auto px-8 flex flex-col justify-center items-center gap-8">
 
         <h3 class="text-4xl font-mtb max-sm:text-3xl">Categories</h3>
-        <div class="grid grid-cols-7 justify-center place-items-center gap-8 w-full py-12 max-sm:grid-cols-2 max-sm:w-4/6 ">
+        <div
+            class="grid grid-cols-7 justify-center gap-8 w-full py-12 max-sm:grid-cols-2 max-sm:w-4/6 max-sm:place-items-center">
             <template x-for="category in categories">
                 <div class="flex flex-col items-center justify-start gap-4 w-[7rem] ">
                     <img class="w-14 h-14" :src="category.icon" :alt="category.title">
                     <span
                         class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
 
-                        <p class="text-center text-xl" x-text="category.title"></p>
+                        <p class="text-center text-xl font-mtb" x-text="category.title"></p>
                     </span>
                 </div>
             </template>
@@ -214,29 +214,36 @@
             {id:3,title:'Choose the best price',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/price.svg'},
             {id:4,title:'Create your account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/account.svg'}
             
-            ]}" class="py-[6rem] container mx-auto flex flex-col justify-center items-center gap-8">
+            ]}" class="py-[6rem] container mx-auto px-8 flex flex-col justify-center items-center gap-8">
 
-        <h3 class="text-4xl">How it Works</h3>
-        <div class="flex w-full gap-4 justify-between py-12">
+        <h3 class="text-4xl font-mtb max-sm:text-3xl">How it Works</h3>
+        <div class="grid grid-cols-4 w-full gap-4 justify-between py-12 max-lg:grid-cols-1">
             <template x-for="step in steps">
-                <div
-                    class="flex flex-col items-center justify-start p-4 gap-4 w-full border border-[#97979781] rounded-md">
-                    <div class="flex items-center justify-between w-full">
-                        <span
-                            class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
-                            <p x-text="step.id" class="text-center text-8xl"></p>
-                        </span>
-                        <span class="">
-                            <img :src="step.icon" :alt="step.title">
-                        </span>
-                    </div>
-                    <div class="flex flex-col gap-4 text-start items-start">
-                        <span
-                            class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+                <div class="flex items-center justify-center gap-4 max-lg:flex-col">
+                    <div
+                        class="flex flex-col items-center justify-start p-4 gap-4 w-full border border-[#97979781] rounded-md">
+                        <div class="flex items-center justify-between w-full">
+                            <span
+                                class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+                                <p x-text="step.id" class="text-center text-8xl font-mtb"></p>
+                            </span>
+                            <span>
+                                <img :src="step.icon" :alt="step.title">
+                            </span>
+                        </div>
+                        <div class="flex flex-col gap-4 text-start items-start">
+                            <span
+                                class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
 
-                            <h5 class="text-2xl" x-text="step.title"></h5>
-                        </span>
-                        <p x-text="step.description"></p>
+                                <h5 class="text-2xl font-mtb" x-text="step.title"></h5>
+                            </span>
+                            <p x-text="step.description" class="text-[#979797]"></p>
+                        </div>
+                    </div>
+
+                    <div x-show="step.id !== 4">
+                        <i class="ti ti-chevron-right text-4xl max-lg:hidden"></i>
+                        <i class="ti ti-chevron-down text-4xl lg:hidden"></i>
                     </div>
                 </div>
             </template>
@@ -256,7 +263,7 @@
         class="bg-[#EDEDEF] py-12">
         <h3 class="text-4xl text-center">Our Partners</h3>
 
-        <div class="container mx-auto flex w-full gap-4 justify-between py-12">
+        <div class="container mx-auto px-8 flex w-full gap-4 justify-between py-12">
             <template x-for="partner in partners ">
                 <div class="rounded-md overflow-hidden border">
                     <img :src="partner" alt="partner">
@@ -270,7 +277,7 @@
 
     <!-- Customer opinions -->
 
-    <section class="container mx-auto py-16" x-data="{ opinions : [
+    <section class="container mx-auto px-8 py-16" x-data="{ opinions : [
         { user:'Hussam saleh', career :'Co-founder', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/1.png' },
         { user:'mohmmed ali', career :'Design director', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/2.png' },
         { user:'ahmed moha', career :'web designer', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/3.png' }
@@ -320,7 +327,7 @@
 
     <!-- Latest blog posts -->
 
-    <section class="container mx-auto py-12" x-data="{ posts : [
+    <section class="container mx-auto px-8 py-12" x-data="{ posts : [
         {title:'secret behind being creative without any strategy', date:'12 jul, 2024', category:'Design', image:'./assets/blog/1.png'},
         {title:'The simpliest form of design Gives minimalism look', date:'12 jul, 2024', category:'Design', image:'./assets/blog/2.png'},
         {title:'Being creative while inventing ideas is quick startup', date:'12 jul, 2025', category:'Business', image:'./assets/blog/3.png'},
@@ -371,7 +378,7 @@
     <!-- CTA -->
     <section class=" bg-[#EDEDEF] py-12">
 
-        <div class="container mx-auto grid grid-cols-2 gap-8">
+        <div class="container mx-auto px-8 grid grid-cols-2 gap-8">
             <h3 class="text-4xl text-start">Sign Up for our <br /> newsletter and never <br /> miss any offers</h3>
             <div class="flex flex-col gap-4 items-center justify-center ms-auto w-2/3">
                 <div class="w-full h-fit">
@@ -395,7 +402,7 @@
     <!-- CTA End-->
 
     <!-- Footer-->
-    <footer class="container mx-auto relative py-44">
+    <footer class="container mx-auto relativ px-8 py-44">
         <div class="flex justify-between items-start">
             <div class="flex flex-col gap-4">
                 <div class="h-[3rem]">
