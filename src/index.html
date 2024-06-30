@@ -217,11 +217,11 @@
             ]}" class="py-[6rem] container mx-auto px-8 flex flex-col justify-center items-center gap-8">
 
         <h3 class="text-4xl font-mtb max-sm:text-3xl">How it Works</h3>
-        <div class="grid grid-cols-4 w-full gap-4 justify-between py-12 max-lg:grid-cols-1">
+        <div class="grid grid-cols-4 w-full h-full gap-4 justify-between py-12 max-lg:grid-cols-1">
             <template x-for="step in steps">
-                <div class="flex items-center justify-center gap-4 max-lg:flex-col">
+                <div class="flex h-full items-center justify-center gap-4 max-lg:flex-col">
                     <div
-                        class="flex flex-col items-center justify-start p-4 gap-4 w-full border border-[#97979781] rounded-md">
+                        class="flex flex-col items-center justify-start py-8 px-4 gap-14 w-full h-full border border-[#97979781] rounded-md">
                         <div class="flex items-center justify-between w-full">
                             <span
                                 class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
@@ -261,7 +261,7 @@
     <section
         x-data="{partners:['./assets/partners/1.svg','./assets/partners/2.svg','./assets/partners/3.svg','./assets/partners/4.svg','./assets/partners/5.svg']}"
         class="bg-[#EDEDEF] py-12">
-        <h3 class="text-4xl text-center">Our Partners</h3>
+        <h3 class="text-4xl font-mtb max-sm:text-3xl text-center">Our Partners</h3>
 
         <div class="container mx-auto px-8 flex w-full gap-4 justify-between py-12">
             <template x-for="partner in partners ">
@@ -277,48 +277,57 @@
 
     <!-- Customer opinions -->
 
-    <section class="container mx-auto px-8 py-16" x-data="{ opinions : [
+    <section class="container mx-auto px-8 py-24" x-data="{ opinions : [
         { user:'Hussam saleh', career :'Co-founder', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/1.png' },
         { user:'mohmmed ali', career :'Design director', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/2.png' },
         { user:'ahmed moha', career :'web designer', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/3.png' }
         ]}">
-        <div class="flex justify-between items-center">
-            <div></div>
-            <h3 class="text-4xl">Customer opinions</h3>
-            <a href="#">Our Client</a>
+        <div class="flex flex-col items-center gap-12 w-full">
+            <div class="w-full flex justify-between items-center max-sm:justify-center">
+                <div class="max-sm:hidden"></div>
+                <h3 class="text-4xl font-mtb max-sm:text-3xl text-center">Customer opinions</h3>
+                <a class="flex items-center bg-gradient-to-r from-[#CE4F57]  to-[#92298D] text-transparent bg-clip-text text-2xl max-sm:hidden"
+                    href="#">
+                    <i class="ti ti-arrow-right"></i>
+                    Our Client</a>
 
 
 
-        </div>
+            </div>
 
-        <div class="py-12">
+            <div class="py-12 w-full h-full">
+                <div class="swiper customer-opinions">
+                    <div class="swiper-wrapper ">
+                        <template x-for="opinion in opinions">
+                            <div class="swiper-slide">
+                                <div
+                                    class="flex flex-col gap-8 items-center bg-white mx-56 min-h-36 text-start relative max-lg:mx-4">
+                                    <div class="absolute left-0">
+                                        <img src="./assets/customers/left-quote.svg">
+                                    </div>
+                                    <p class="p-8 max-sm:text-center" x-text="opinion.opinion"></p>
 
-            <div class="swiper customer-opinions">
-                <div class="swiper-wrapper ">
-                    <template x-for="opinion in opinions">
-                        <div class="swiper-slide">
-                            <div class="flex flex-col gap-8 items-center bg-white mx-56 min-h-36 text-start relative">
-                                <div class="absolute left-0">
-                                    <img src="./assets/customers/left-quote.svg">
-                                </div>
-                                <p class="p-8" x-text="opinion.opinion"></p>
-
-                                <div class="flex items-center gap-4">
-                                    <img :src="opinion.photo" :alt="opinion.user">
-                                    <div class="flex flex-col gap-2 justify-start p-4">
-                                        <p x-text="opinion.user"></p>
-                                        <p class="text-[#F16623]" x-text="opinion.career"></p>
+                                    <div class="flex items-center gap-4">
+                                        <img :src="opinion.photo" :alt="opinion.user">
+                                        <div class="flex flex-col gap-2 justify-start p-4">
+                                            <p x-text="opinion.user"></p>
+                                            <p class="text-[#F16623]" x-text="opinion.career"></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </template>
+                    </div>
+                    <div class="relative w-1/3 mx-auto flex justify-center p-8 max-lg:w-4/6">
+                        <div class="swiper-pagination">
                         </div>
-                    </template>
-                </div>
-                <div class="relative w-full flex justify-center px-8">
-                    <div class="swiper-pagination">
                     </div>
                 </div>
             </div>
+            <a class="flex items-center bg-gradient-to-r from-[#CE4F57]  to-[#92298D] text-transparent bg-clip-text text-2xl sm:hidden"
+                href="#">
+                <i class="ti ti-arrow-right"></i>
+                Our Client</a>
         </div>
     </section>
 
@@ -332,13 +341,19 @@
         {title:'The simpliest form of design Gives minimalism look', date:'12 jul, 2024', category:'Design', image:'./assets/blog/2.png'},
         {title:'Being creative while inventing ideas is quick startup', date:'12 jul, 2025', category:'Business', image:'./assets/blog/3.png'},
         ]}">
-        <div class="flex justify-between items-center">
-            <div></div>
-            <h3 class="text-4xl">Latest blog posts</h3>
-            <a href="#">More Blogs</a>
+
+        <div class="flex flex-col items-center gap-12 w-full">
+            
+        <div class="w-full flex justify-between items-center max-sm:justify-center">
+            <div class="max-sm:hidden"></div>
+            <h3 class="text-4xl font-mtb max-sm:text-3xl text-center">Latest blog posts</h3>
+            <a class="flex items-center bg-gradient-to-r from-[#CE4F57]  to-[#92298D] text-transparent bg-clip-text text-2xl max-sm:hidden"
+            href="#">
+            <i class="ti ti-arrow-right"></i>
+                More Blogs</a>
         </div>
 
-        <div class="grid grid-cols-3 items-center gap-6 py-12">
+        <div class="grid grid-cols-3 items-center gap-6 py-12 max-md:grid-cols-1">
 
             <template x-for="post in posts">
                 <div class="shadow-md w-full h-full flex flex-col rounded-md overflow-hidden">
@@ -371,6 +386,11 @@
             </template>
 
         </div>
+        <a class="flex items-center bg-gradient-to-r from-[#CE4F57]  to-[#92298D] text-transparent bg-clip-text text-2xl sm:hidden"
+        href="#">
+        <i class="ti ti-arrow-right"></i>
+            More Blogs</a>
+        </div>
     </section>
 
     <!-- Latest blog posts End -->
@@ -378,9 +398,9 @@
     <!-- CTA -->
     <section class=" bg-[#EDEDEF] py-12">
 
-        <div class="container mx-auto px-8 grid grid-cols-2 gap-8">
-            <h3 class="text-4xl text-start">Sign Up for our <br /> newsletter and never <br /> miss any offers</h3>
-            <div class="flex flex-col gap-4 items-center justify-center ms-auto w-2/3">
+        <div class="container mx-auto px-8 grid grid-cols-2 gap-8 max-md:grid-cols-1">
+            <h3 class="text-4xl text-start font-mtb max-md:text-center max-md:w-2/3 max-md:mx-auto">Sign Up for our <br /> newsletter and never miss any offers</h3>
+            <div class="flex flex-col gap-4 items-center justify-center ms-auto w-2/3 max-md:mx-auto">
                 <div class="w-full h-fit">
                     <div class="relative rounded-md shadow-sm">
                         <input type="email" name="email" id="email"
@@ -402,9 +422,9 @@
     <!-- CTA End-->
 
     <!-- Footer-->
-    <footer class="container mx-auto relativ px-8 py-44">
-        <div class="flex justify-between items-start">
-            <div class="flex flex-col gap-4">
+    <footer class="container mx-auto relative px-8 py-44">
+        <div class="flex justify-between gap-6 items-start max-md:flex-col max-md:items-center">
+            <div class="flex flex-col gap-4 max-md:items-center">
                 <div class="h-[3rem]">
                     <img class="h-full" width="auto" src="./assets/logo/logo.svg" alt="evento">
                 </div>
@@ -439,10 +459,10 @@
                 <p class="mt-12">© 2024 All rights reserved.</p>
             </div>
 
-            <div class="flex gap-16">
-                <div class="flex flex-col gap-4 items-start">
+            <div class="flex gap-16  max-md:flex-col">
+                <div class="flex flex-col gap-4 items-start max-md:items-center">
                     <h5 class="text-2xl">Quick links</h5>
-                    <div class="flex flex-col gap-4 items-start text-[#747474]">
+                    <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
                         <a href="#">Home</a>
                         <a href="#">About us</a>
                         <a href="#services">Services</a>
@@ -450,16 +470,16 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 items-start">
+                <div class="flex flex-col gap-4 items-start max-md:items-center">
                     <h5 class="text-2xl">About</h5>
-                    <div class="flex flex-col gap-4 items-start text-[#747474]">
+                    <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
                         <a href="#how-it-works">How It Works</a>
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 items-start">
+                <div class="flex flex-col gap-4 items-start max-md:items-center">
                     <h5 class="text-2xl">Help Centre</h5>
-                    <div class="flex flex-col gap-4 items-start text-[#747474]">
+                    <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
                         <a href="#">Payments</a>
                         <a href="#">Shipping</a>
                         <a href="#">Product returns</a>
@@ -468,11 +488,11 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 items-start">
+                <div class="flex flex-col gap-4 items-start max-md:items-center">
                     <h5 class="text-2xl">Our newsletter</h5>
                     <p class="text-start">Subscribe to our newsletter to get updates about our offers.</p>
 
-                    <div class="w-full h-fit mt-12">
+                    <div class="w-full h-fit mt-12 max-md:mt-4">
                         <div class="relative rounded-md shadow-sm flex">
                             <input type="email" name="email"
                                 class="block w-full rounded-l-md border-0 py-4 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"

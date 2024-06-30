@@ -43,11 +43,11 @@ const customerOpinionsSwiper = new Swiper('.customer-opinions', {
       translate: ["120%", 0, -500],
     },
   },
-//   autoplay: {
-//     delay: 3000,
-//     pauseOnMouseEnter: true,
-//     disableOnInteraction: 0
-// },
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: 0
+},
 });
 
 

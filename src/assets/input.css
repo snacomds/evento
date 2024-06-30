@@ -25,7 +25,7 @@ body{
 }
 
 .customer-opinions .swiper-pagination-bullet {
-    width: 100%;
+    width: 30%;
     height: 2px;
     text-align: center;
     line-height: 20px;
