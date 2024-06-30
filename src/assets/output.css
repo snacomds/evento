@@ -1482,22 +1482,12 @@ body{
     height: 3rem;
   }
 
-  .max-sm\:rounded {
-    border-radius: 0.25rem;
+  .max-sm\:w-full {
+    width: 100%;
   }
 
   .max-sm\:rounded-full {
     border-radius: 9999px;
-  }
-
-  .max-sm\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  .max-sm\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
   }
 
   .max-sm\:px-4 {
@@ -1505,19 +1495,24 @@ body{
     padding-right: 1rem;
   }
 
-  .max-sm\:py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
-
-  .max-sm\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
   .max-sm\:py-\[0\.3rem\] {
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
+  }
+
+  .max-sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .max-sm\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .max-sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .max-sm\:text-base {
@@ -1525,22 +1520,37 @@ body{
     line-height: 1.5rem;
   }
 
+  .max-sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .max-sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .max-sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .max-sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .max-sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 
-  .max-sm\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
+  .max-sm\:leading-6 {
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width: 640px) {
-  .sm\:h-\[1\.5rem\] {
-    height: 1.5rem;
-  }
-
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
