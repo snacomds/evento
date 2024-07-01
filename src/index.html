@@ -37,8 +37,8 @@
 <body>
     <!-- Navbar -->
     <nav class="sticky w-full top-0 z-50 bg-white border-b boreder-solid boreder-[#817e95] h-[5.5rem] max-sm:h-[3rem]">
-        <div class="container mx-auto px-8 relative h-full flex justify-between items-center z-10 ">
-            <div class="flex gap-4 items-center">
+        <div class="container relative z-10 flex items-center justify-between h-full px-8 mx-auto ">
+            <div class="flex items-center gap-4">
                 <div class="h-[2rem] max-sm:h-[1.5rem]">
                     <img class="h-full" width="auto" src="./assets/logo/logo.svg" alt="evento">
                 </div>
@@ -53,7 +53,7 @@
                     </div>
 
                     <div x-show="visible"
-                        class="absolute left-0 p-4 z-10 mt-2 w-[20rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                        class="absolute left-1/2 transform -translate-x-1/2 p-4 z-10 mt-2 w-[20rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                         role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                         <div x-data="{ actions : [
                             {title: 'Consultant', icon: 'ti ti-user'},
@@ -69,7 +69,7 @@
                             <template x-for="(action,index) in actions">
 
                                 <a href="#"
-                                    class="block flex gap-4 items-center pointer-events-auto cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md "
+                                    class="flex items-center block gap-4 px-4 py-2 text-sm text-gray-700 rounded-md cursor-pointer pointer-events-auto hover:bg-gray-50 "
                                     role="menuitem" tabindex="-1" id="menu-item-0">
                                     <span class="p-2 bg-[#92298f2c] rounded-md ">
                                         <span
@@ -91,7 +91,7 @@
                     class="pointer-events-auto cursor-pointer font-mtb font-semibold hover:text-[#92298D] max-sm:text-xs">Login</button>
 
                 <button type="button"
-                    class="pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-2 font-mtb   text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block max-sm:text-xs max-sm:py-[0.3rem] max-sm:px-4 max-sm:rounded-full">Join
+                    class="pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-2 font-mtb   text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block max-sm:text-xs max-sm:py-[0.3rem] max-sm:px-[0.5rem] max-sm:rounded-full">Join
                     us</button>
 
             </div>
@@ -105,28 +105,28 @@
 
 
     <!-- Hero -->
-    <section class="w-full z-10">
+    <section class="z-10 w-full">
         <div class="relative w-full h-[50vh]">
-            <img class="w-full h-full object-fill" src="./assets/photos/hero.jpg" alt="">
+            <img class="object-fill w-full h-full" src="./assets/photos/hero.jpg" alt="">
 
-            <div class=" absolute w-full h-full flex flex-col justify-center items-center top-0">
-                <h1 class=" text-6xl font-mtb text-white/80 shadow-md text-center max-sm:text-5xl">Get the most
+            <div class="absolute top-0 flex flex-col items-center justify-center w-full h-full ">
+                <h1 class="text-6xl text-center shadow-md font-mtb text-white/80 max-sm:text-5xl">Get the most
                     <br />
                     out of Evantto
                 </h1>
 
-                <p class="mt-16 opacity-80 text-3xl text-center text-white shadow-md max-sm:text-2xl">Beyond your
+                <p class="mt-16 text-3xl text-center text-white shadow-md opacity-80 max-sm:text-2xl">Beyond your
                     expectations </p>
 
                 <div class="w-[36rem]  mt-8 max-sm:w-full max-sm:px-6">
-                    <div class="relative rounded-xl shadow-sm">
+                    <div class="relative shadow-sm rounded-xl">
                         <input type="text" name="search" id="search"
-                            class="block w-full rounded-xl border-0 py-6 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  max-sm:text-sm max-sm:leading-6 max-sm:py-4"
+                            class="block w-full py-6 pr-20 text-gray-900 border-0 rounded-xl pl-7 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset max-sm:text-sm max-sm:leading-6 max-sm:py-4"
                             placeholder="Items, collections and creators">
-                        <div class="absolute inset-y-0 right-0 p-4 flex items-center">
+                        <div class="absolute inset-y-0 right-0 flex items-center p-4">
                             <label for="category" class="sr-only">Category</label>
                             <select id="category" name="category"
-                                class="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset  sm:text-sm">
+                                class="h-full py-0 pl-2 text-gray-500 bg-transparent border-0 rounded-md pr-7 focus:ring-2 focus:ring-inset sm:text-sm">
                                 <option>Technical</option>
                                 <option>Staff</option>
                                 <option>Event</option>
@@ -134,7 +134,7 @@
                             <span
                                 class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text ml-4">
 
-                                <i class="ti ti-search text-xl"></i>
+                                <i class="text-xl ti ti-search"></i>
                             </span>
                         </div>
                     </div>
@@ -160,10 +160,10 @@
                 <template x-for="service in services">
                     <div class="swiper-slide !w-[30rem] !h-[27rem] max-sm:!w-[24rem] max-sm:!h-[22rem]">
 
-                        <div class="w-full h-full flex flex-col gap-2 justify-start">
+                        <div class="flex flex-col justify-start w-full h-full gap-2">
                             <h4 x-text="service.title" class="text-xl text-[#222222]"></h4>
-                            <div class="rounded-md overflow-hidden w-full h-full">
-                                <img class="w-full h-full object-cover" :src="service.image" alt="">
+                            <div class="w-full h-full overflow-hidden rounded-md">
+                                <img class="object-cover w-full h-full" :src="service.image" alt="">
                             </div>
                         </div>
                     </div>
@@ -186,18 +186,18 @@
         {title:'Event',icon:'./assets/categories/event.svg'},
         {title:'photo & video',icon:'./assets/categories/photo-video.svg'},
         {title:'Others',icon:'./assets/categories/others.svg'},
-        ]}" class="py-32 container mx-auto px-8 flex flex-col justify-center items-center gap-8">
+        ]}" class="container flex flex-col items-center justify-center gap-8 px-8 py-32 mx-auto">
 
         <h3 class="text-4xl font-mtb max-sm:text-3xl">Categories</h3>
         <div
-            class="grid grid-cols-7 justify-center gap-8 w-full py-12 max-sm:grid-cols-2 max-sm:w-4/6 max-sm:place-items-center">
+            class="grid justify-center w-full grid-cols-7 gap-8 py-12 max-sm:grid-cols-2 max-sm:w-4/6 max-sm:place-items-center">
             <template x-for="category in categories">
                 <div class="flex flex-col items-center justify-start gap-4 w-[7rem] ">
                     <img class="w-14 h-14" :src="category.icon" :alt="category.title">
                     <span
                         class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
 
-                        <p class="text-center text-xl font-mtb" x-text="category.title"></p>
+                        <p class="text-xl text-center font-mtb" x-text="category.title"></p>
                     </span>
                 </div>
             </template>
@@ -217,9 +217,9 @@
             ]}" class="py-[6rem] container mx-auto px-8 flex flex-col justify-center items-center gap-8">
 
         <h3 class="text-4xl font-mtb max-sm:text-3xl">How it Works</h3>
-        <div class="grid grid-cols-4 w-full h-full gap-4 justify-between py-12 max-lg:grid-cols-1">
+        <div class="grid justify-between w-full h-full grid-cols-4 gap-4 py-12 max-lg:grid-cols-1">
             <template x-for="step in steps">
-                <div class="flex h-full items-center justify-center gap-4 max-lg:flex-col">
+                <div class="flex items-center justify-center h-full gap-4 max-lg:flex-col">
                     <div
                         class="flex flex-col items-center justify-start py-8 px-4 gap-14 w-full h-full border border-[#97979781] rounded-md">
                         <div class="flex items-center justify-between w-full">
@@ -231,7 +231,7 @@
                                 <img :src="step.icon" :alt="step.title">
                             </span>
                         </div>
-                        <div class="flex flex-col gap-4 text-start items-start">
+                        <div class="flex flex-col items-start gap-4 text-start">
                             <span
                                 class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
 
@@ -242,8 +242,8 @@
                     </div>
 
                     <div x-show="step.id !== 4">
-                        <i class="ti ti-chevron-right text-4xl max-lg:hidden"></i>
-                        <i class="ti ti-chevron-down text-4xl lg:hidden"></i>
+                        <i class="text-4xl ti ti-chevron-right max-lg:hidden"></i>
+                        <i class="text-4xl ti ti-chevron-down lg:hidden"></i>
                     </div>
                 </div>
             </template>
@@ -261,11 +261,11 @@
     <section
         x-data="{partners:['./assets/partners/1.svg','./assets/partners/2.svg','./assets/partners/3.svg','./assets/partners/4.svg','./assets/partners/5.svg']}"
         class="bg-[#EDEDEF] py-12">
-        <h3 class="text-4xl font-mtb max-sm:text-3xl text-center">Our Partners</h3>
+        <h3 class="text-4xl text-center font-mtb max-sm:text-3xl">Our Partners</h3>
 
-        <div class="container mx-auto px-8 flex w-full gap-4 justify-between py-12">
+        <div class="container flex justify-between w-full gap-4 px-8 py-12 mx-auto">
             <template x-for="partner in partners ">
-                <div class="rounded-md overflow-hidden border">
+                <div class="overflow-hidden border rounded-md">
                     <img :src="partner" alt="partner">
                 </div>
             </template>
@@ -277,15 +277,15 @@
 
     <!-- Customer opinions -->
 
-    <section class="container mx-auto px-8 py-24" x-data="{ opinions : [
+    <section class="container px-8 py-24 mx-auto" x-data="{ opinions : [
         { user:'Hussam saleh', career :'Co-founder', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/1.png' },
         { user:'mohmmed ali', career :'Design director', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/2.png' },
         { user:'ahmed moha', career :'web designer', opinion:'When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward the end goal of a complete website. By creating a visual guide along the way, the designer or developer can get input from the other people involved in the website such as the customer, their manager, and other members of the team.',photo:'./assets/customers/3.png' }
         ]}">
-        <div class="flex flex-col items-center gap-12 w-full">
-            <div class="w-full flex justify-between items-center max-sm:justify-center">
+        <div class="flex flex-col items-center w-full gap-12">
+            <div class="flex items-center justify-between w-full max-sm:justify-center">
                 <div class="max-sm:hidden"></div>
-                <h3 class="text-4xl font-mtb max-sm:text-3xl text-center">Customer opinions</h3>
+                <h3 class="text-4xl text-center font-mtb max-sm:text-3xl">Customer opinions</h3>
                 <a class="flex items-center bg-gradient-to-r from-[#CE4F57]  to-[#92298D] text-transparent bg-clip-text text-2xl max-sm:hidden"
                     href="#">
                     <i class="ti ti-arrow-right"></i>
@@ -295,13 +295,13 @@
 
             </div>
 
-            <div class="py-12 w-full h-full">
+            <div class="w-full h-full py-12">
                 <div class="swiper customer-opinions">
                     <div class="swiper-wrapper ">
                         <template x-for="opinion in opinions">
                             <div class="swiper-slide">
                                 <div
-                                    class="flex flex-col gap-8 items-center bg-white mx-56 min-h-36 text-start relative max-lg:mx-4">
+                                    class="relative flex flex-col items-center gap-8 mx-56 bg-white min-h-36 text-start max-lg:mx-4">
                                     <div class="absolute left-0">
                                         <img src="./assets/customers/left-quote.svg">
                                     </div>
@@ -309,7 +309,7 @@
 
                                     <div class="flex items-center gap-4">
                                         <img :src="opinion.photo" :alt="opinion.user">
-                                        <div class="flex flex-col gap-2 justify-start p-4">
+                                        <div class="flex flex-col justify-start gap-2 p-4">
                                             <p x-text="opinion.user"></p>
                                             <p class="text-[#F16623]" x-text="opinion.career"></p>
                                         </div>
@@ -318,7 +318,7 @@
                             </div>
                         </template>
                     </div>
-                    <div class="relative w-1/3 mx-auto flex justify-center p-8 max-lg:w-4/6">
+                    <div class="relative flex justify-center w-1/3 p-8 mx-auto max-lg:w-4/6">
                         <div class="swiper-pagination">
                         </div>
                     </div>
@@ -336,45 +336,45 @@
 
     <!-- Latest blog posts -->
 
-    <section class="container mx-auto px-8 py-12" x-data="{ posts : [
+    <section class="container px-8 py-12 mx-auto" x-data="{ posts : [
         {title:'secret behind being creative without any strategy', date:'12 jul, 2024', category:'Design', image:'./assets/blog/1.png'},
         {title:'The simpliest form of design Gives minimalism look', date:'12 jul, 2024', category:'Design', image:'./assets/blog/2.png'},
         {title:'Being creative while inventing ideas is quick startup', date:'12 jul, 2025', category:'Business', image:'./assets/blog/3.png'},
         ]}">
 
-        <div class="flex flex-col items-center gap-12 w-full">
+        <div class="flex flex-col items-center w-full gap-12">
             
-        <div class="w-full flex justify-between items-center max-sm:justify-center">
+        <div class="flex items-center justify-between w-full max-sm:justify-center">
             <div class="max-sm:hidden"></div>
-            <h3 class="text-4xl font-mtb max-sm:text-3xl text-center">Latest blog posts</h3>
+            <h3 class="text-4xl text-center font-mtb max-sm:text-3xl">Latest blog posts</h3>
             <a class="flex items-center bg-gradient-to-r from-[#CE4F57]  to-[#92298D] text-transparent bg-clip-text text-2xl max-sm:hidden"
             href="#">
             <i class="ti ti-arrow-right"></i>
                 More Blogs</a>
         </div>
 
-        <div class="grid grid-cols-3 items-center gap-6 py-12 max-md:grid-cols-1">
+        <div class="grid items-center grid-cols-3 gap-6 py-12 max-md:grid-cols-1">
 
             <template x-for="post in posts">
-                <div class="shadow-md w-full h-full flex flex-col rounded-md overflow-hidden">
+                <div class="flex flex-col w-full h-full overflow-hidden rounded-md shadow-md">
                     <div class="w-full h-[20rem] top-0 start-0">
-                        <img class="w-full h-full object-cover" :src="post.image" :alt="post.title">
+                        <img class="object-cover w-full h-full" :src="post.image" :alt="post.title">
                     </div>
-                    <div class="p-4 flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 p-4">
                         <div class="flex gap-4">
                             <span
                                 class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
-                                <p class="uppercase text-sm" x-text="post.date"></p>
+                                <p class="text-sm uppercase" x-text="post.date"></p>
                             </span>
 
                             <span
                                 class="bg-gradient-to-r from-[#CE4F57] to-[#92298D] inline-block text-transparent bg-clip-text">
-                                <i class="ti ti-point text-sm"></i>
+                                <i class="text-sm ti ti-point"></i>
                             </span>
 
                             <span
                                 class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
-                                <p class="uppercase text-sm" x-text="post.category"></p>
+                                <p class="text-sm uppercase" x-text="post.category"></p>
                             </span>
 
                         </div>
@@ -398,13 +398,13 @@
     <!-- CTA -->
     <section class=" bg-[#EDEDEF] py-12">
 
-        <div class="container mx-auto px-8 grid grid-cols-2 gap-8 max-md:grid-cols-1">
+        <div class="container grid grid-cols-2 gap-8 px-8 mx-auto max-md:grid-cols-1">
             <h3 class="text-4xl text-start font-mtb max-md:text-center max-md:w-2/3 max-md:mx-auto">Sign Up for our <br /> newsletter and never miss any offers</h3>
-            <div class="flex flex-col gap-4 items-center justify-center ms-auto w-2/3 max-md:mx-auto">
+            <div class="flex flex-col items-center justify-center w-2/3 gap-4 ms-auto max-md:mx-auto">
                 <div class="w-full h-fit">
                     <div class="relative rounded-md shadow-sm">
                         <input type="email" name="email" id="email"
-                            class="block w-full rounded-md border-0 py-4 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            class="block w-full py-4 pr-20 text-gray-900 border-0 rounded-md pl-7 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             placeholder="Your email address">
                     </div>
                 </div>
@@ -422,36 +422,36 @@
     <!-- CTA End-->
 
     <!-- Footer-->
-    <footer class="container mx-auto relative px-8 py-44">
-        <div class="flex justify-between gap-6 items-start max-md:flex-col max-md:items-center">
+    <footer class="container relative px-8 mx-auto py-44">
+        <div class="flex items-start justify-between gap-6 max-md:flex-col max-md:items-center">
             <div class="flex flex-col gap-4 max-md:items-center">
                 <div class="h-[3rem]">
                     <img class="h-full" width="auto" src="./assets/logo/logo.svg" alt="evento">
                 </div>
-                <div class="w-full flex justify-between gap-2">
+                <div class="flex justify-between w-full gap-2">
                     <a href="#"
                         class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
-                        <i class="ti ti-brand-facebook text-white text-2xl "></i>
+                        <i class="text-2xl text-white ti ti-brand-facebook "></i>
                     </a>
 
                     <a href="#"
                         class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
-                        <i class="ti ti-brand-linkedin text-white text-2xl "></i>
+                        <i class="text-2xl text-white ti ti-brand-linkedin "></i>
                     </a>
 
                     <a href="#"
                         class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
-                        <i class="ti ti-brand-github text-white text-2xl "></i>
+                        <i class="text-2xl text-white ti ti-brand-github "></i>
                     </a>
 
                     <a href="#"
                         class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
-                        <i class="ti ti-brand-x text-white text-2xl "></i>
+                        <i class="text-2xl text-white ti ti-brand-x "></i>
                     </a>
 
                     <a href="#"
                         class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
-                        <i class="ti ti-brand-instagram text-white text-2xl "></i>
+                        <i class="text-2xl text-white ti ti-brand-instagram "></i>
                     </a>
 
                 </div>
@@ -459,8 +459,8 @@
                 <p class="mt-12">© 2024 All rights reserved.</p>
             </div>
 
-            <div class="flex gap-16  max-md:flex-col">
-                <div class="flex flex-col gap-4 items-start max-md:items-center">
+            <div class="flex gap-16 max-md:flex-col">
+                <div class="flex flex-col items-start gap-4 max-md:items-center">
                     <h5 class="text-2xl">Quick links</h5>
                     <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
                         <a href="#">Home</a>
@@ -470,14 +470,14 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 items-start max-md:items-center">
+                <div class="flex flex-col items-start gap-4 max-md:items-center">
                     <h5 class="text-2xl">About</h5>
                     <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
                         <a href="#how-it-works">How It Works</a>
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 items-start max-md:items-center">
+                <div class="flex flex-col items-start gap-4 max-md:items-center">
                     <h5 class="text-2xl">Help Centre</h5>
                     <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
                         <a href="#">Payments</a>
@@ -488,14 +488,14 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 items-start max-md:items-center">
+                <div class="flex flex-col items-start gap-4 max-md:items-center">
                     <h5 class="text-2xl">Our newsletter</h5>
                     <p class="text-start">Subscribe to our newsletter to get updates about our offers.</p>
 
-                    <div class="w-full h-fit mt-12 max-md:mt-4">
-                        <div class="relative rounded-md shadow-sm flex">
+                    <div class="w-full mt-12 h-fit max-md:mt-4">
+                        <div class="relative flex rounded-md shadow-sm">
                             <input type="email" name="email"
-                                class="block w-full rounded-l-md border-0 py-4 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                class="block w-full py-4 pr-20 text-gray-900 border-0 rounded-l-md pl-7 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Your email address">
                             <button
                                 class="pointer-events-auto cursor-pointer rounded-r-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-4 font-semibold leading-5 text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block">Send</button>

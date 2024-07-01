@@ -37,8 +37,8 @@
 <body>
     <!-- Navbar -->
     <nav class="sticky w-full top-0 z-50 bg-white border-b boreder-solid boreder-[#817e95] h-[5.5rem] max-sm:h-[3rem]">
-        <div class="container mx-auto px-8 relative h-full flex justify-between items-center z-10 ">
-            <div class="flex gap-4 items-center">
+        <div class="container relative z-10 flex items-center justify-between h-full px-8 mx-auto ">
+            <div class="flex items-center gap-4">
                 <div class="h-[2rem] max-sm:h-[1.5rem]">
                     <img class="h-full" width="auto" src="./assets/logo/logo.svg" alt="evento">
                 </div>
@@ -69,7 +69,7 @@
                             <template x-for="(action,index) in actions">
 
                                 <a href="#"
-                                    class="block flex gap-4 items-center pointer-events-auto cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md "
+                                    class="flex items-center block gap-4 px-4 py-2 text-sm text-gray-700 rounded-md cursor-pointer pointer-events-auto hover:bg-gray-50 "
                                     role="menuitem" tabindex="-1" id="menu-item-0">
                                     <span class="p-2 bg-[#92298f2c] rounded-md ">
                                         <span
@@ -91,7 +91,7 @@
                     class="pointer-events-auto cursor-pointer font-mtb font-semibold hover:text-[#92298D] max-sm:text-xs">Login</button>
 
                 <button type="button"
-                    class="pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-2 font-mtb   text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block max-sm:text-xs max-sm:py-[0.3rem] max-sm:px-4 max-sm:rounded-full">Join
+                    class="pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-2 font-mtb   text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block max-sm:text-xs max-sm:py-[0.3rem] max-sm:px-[0.5rem] max-sm:rounded-full">Join
                     us</button>
 
             </div>
@@ -100,42 +100,42 @@
     </nav>
     <!-- Navbar End-->
 
-    <div class="absolute top-3 right-0">
+    <div class="absolute right-0 top-3">
         <img src="./assets/photos/Vector.png">
     </div>
 
-    <main class="h-screen w-screen grid grid-cols-12">
+    <main class="grid w-screen h-screen grid-cols-12">
         <div class="xl:col-span-8 max-xl:hidden">
-            <img class="w-full h-full object-cover" src="./assets/photos/login.png" alt="login">
+            <img class="object-cover w-full h-full" src="./assets/photos/login.png" alt="login">
         </div>
         <div class="col-span-4 py-[5rem] px-[3.5rem] flex flex-col items-start w-full h-full max-xl:col-span-12">
             <h4 class="text-3xl font-mtb text-start">
                 Nice to see you <br />AHMED
             </h4>
 
-            <div class="flex flex-col gap-4 justify-center w-full">
+            <div class="flex flex-col justify-center w-full gap-4">
                 <br class="w-full h-fit">
-                <div class="relative rounded-md shadow-sm flex flex-col gap-2">
+                <div class="relative flex flex-col gap-2 rounded-md shadow-sm">
                     <label for="email">Login</label>
                     <input type="email" name="email" id="email"
-                        class="block w-full rounded-md border-0 py-4 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        class="block w-full py-4 pr-20 text-gray-900 border-0 rounded-md pl-7 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         placeholder="Email or phone number">
                 </div>
 
-                <div class="relative rounded-md shadow-sm flex flex-col gap-2">
+                <div class="relative flex flex-col gap-2 rounded-md shadow-sm">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password"
-                        class="block w-full rounded-md border-0 py-4 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        class="block w-full py-4 pr-20 text-gray-900 border-0 rounded-md pl-7 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         placeholder="Enter password">
                 </div>
 
-                <div class="flex justify-between items-center">
+                <div class="flex items-center justify-between">
                     <label class="inline-flex items-center cursor-pointer">
                         <input type="checkbox" value="" class="sr-only peer">
                         <div
                             class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
                         </div>
-                        <span class="ms-3 text-sm font-medium text-gray-900 ">Remember me</span>
+                        <span class="text-sm font-medium text-gray-900 ms-3 ">Remember me</span>
                     </label>
                     <a href="#">Forgot password?</a>
                 </div>
@@ -165,36 +165,36 @@
 
 
     <!-- Footer-->
-    <footer class="container mx-auto relative px-8 py-44">
-        <div class="flex justify-between gap-6 items-start max-md:flex-col max-md:items-center">
+    <footer class="container relative px-8 mx-auto py-44">
+        <div class="flex items-start justify-between gap-6 max-md:flex-col max-md:items-center">
             <div class="flex flex-col gap-4 max-md:items-center">
                 <div class="h-[3rem]">
                     <img class="h-full" width="auto" src="./assets/logo/logo.svg" alt="evento">
                 </div>
-                <div class="w-full flex justify-between gap-2">
+                <div class="flex justify-between w-full gap-2">
                     <a href="#"
                         class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
-                        <i class="ti ti-brand-facebook text-white text-2xl "></i>
+                        <i class="text-2xl text-white ti ti-brand-facebook "></i>
                     </a>
 
                     <a href="#"
                         class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
-                        <i class="ti ti-brand-linkedin text-white text-2xl "></i>
+                        <i class="text-2xl text-white ti ti-brand-linkedin "></i>
                     </a>
 
                     <a href="#"
                         class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
-                        <i class="ti ti-brand-github text-white text-2xl "></i>
+                        <i class="text-2xl text-white ti ti-brand-github "></i>
                     </a>
 
                     <a href="#"
                         class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
-                        <i class="ti ti-brand-x text-white text-2xl "></i>
+                        <i class="text-2xl text-white ti ti-brand-x "></i>
                     </a>
 
                     <a href="#"
                         class="w-8 h-8 hover:bg-[#92298D] bg-[#A5A5A5] rounded-md flex justify-center items-center">
-                        <i class="ti ti-brand-instagram text-white text-2xl "></i>
+                        <i class="text-2xl text-white ti ti-brand-instagram "></i>
                     </a>
 
                 </div>
@@ -202,8 +202,8 @@
                 <p class="mt-12">© 2024 All rights reserved.</p>
             </div>
 
-            <div class="flex gap-16  max-md:flex-col">
-                <div class="flex flex-col gap-4 items-start max-md:items-center">
+            <div class="flex gap-16 max-md:flex-col">
+                <div class="flex flex-col items-start gap-4 max-md:items-center">
                     <h5 class="text-2xl">Quick links</h5>
                     <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
                         <a href="#">Home</a>
@@ -213,14 +213,14 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 items-start max-md:items-center">
+                <div class="flex flex-col items-start gap-4 max-md:items-center">
                     <h5 class="text-2xl">About</h5>
                     <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
                         <a href="#how-it-works">How It Works</a>
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 items-start max-md:items-center">
+                <div class="flex flex-col items-start gap-4 max-md:items-center">
                     <h5 class="text-2xl">Help Centre</h5>
                     <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
                         <a href="#">Payments</a>
@@ -231,14 +231,14 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 items-start max-md:items-center">
+                <div class="flex flex-col items-start gap-4 max-md:items-center">
                     <h5 class="text-2xl">Our newsletter</h5>
                     <p class="text-start">Subscribe to our newsletter to get updates about our offers.</p>
 
-                    <div class="w-full h-fit mt-12 max-md:mt-4">
-                        <div class="relative rounded-md shadow-sm flex">
+                    <div class="w-full mt-12 h-fit max-md:mt-4">
+                        <div class="relative flex rounded-md shadow-sm">
                             <input type="email" name="email"
-                                class="block w-full rounded-l-md border-0 py-4 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                class="block w-full py-4 pr-20 text-gray-900 border-0 rounded-l-md pl-7 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Your email address">
                             <button
                                 class="pointer-events-auto cursor-pointer rounded-r-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-4 font-semibold leading-5 text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block">Send</button>
