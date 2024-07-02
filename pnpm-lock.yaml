@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  alpinejs-i18n:
+    specifier: ^2.4.2
+    version: 2.4.2
+
 devDependencies:
   live-server:
     specifier: ^1.2.2
@@ -96,6 +101,10 @@ packages:
       mime-types: 2.1.35
       negotiator: 0.6.3
     dev: true
+
+  /alpinejs-i18n@2.4.2:
+    resolution: {integrity: sha512-ID/tDQGAuEouPN41enKL0+s26PQ8yxXzhCJghZffb5ixJ4iZ/8fI2+22HcgBdjkRQsweTFMYoQrPxxO+yCVYiA==}
+    dev: false
 
   /ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
