@@ -113,31 +113,31 @@
 
 
     <!-- Hero -->
-    <section class="z-10 w-full">
+    <section x-data class="z-10 w-full">
         <div class="relative w-full h-[50vh]">
             <img class="object-fill w-full h-full" src="./assets/photos/hero.jpg" alt="">
 
             <div class="absolute top-0 flex flex-col items-center justify-center w-full h-full ">
-                <h1 class="text-6xl text-center shadow-md font-mtb text-white/80 max-sm:text-5xl">Get the most
+                <h1 class="text-6xl text-center shadow-md whitespace-pre-wrap font-mtb text-white/80 max-sm:text-5xl" x-text="$t('hero_title')">Get the most
                     <br />
                     out of Evantto
                 </h1>
 
-                <p class="mt-16 text-3xl text-center text-white shadow-md opacity-80 max-sm:text-2xl">Beyond your
+                <p class="mt-16 text-3xl text-center text-white shadow-md opacity-80 max-sm:text-2xl" x-text="$t('hero_description')">Beyond your
                     expectations </p>
 
                 <div class="w-[36rem] mt-8 max-sm:w-full max-sm:px-6">
                     <div class="relative shadow-sm rounded-xl">
                         <input type="text" name="search" id="search"
                             class="block w-full py-6 pr-20 text-gray-900 border-0 rounded-xl pl-7 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset max-sm:text-sm max-sm:leading-6 max-sm:py-4"
-                            placeholder="Items, collections and creators">
+                            :placeholder="$t('hero_search')">
                         <div class="absolute inset-y-0 end-0 flex items-center p-4">
                             <label for="category" class="sr-only">Category</label>
                             <select id="category" name="category"
                                 class="h-full py-0 ps-2 text-gray-500 bg-transparent border-0 rounded-md pe-7 focus:ring-2 focus:ring-inset sm:text-sm">
-                                <option>Technical</option>
-                                <option>Staff</option>
-                                <option>Event</option>
+                                <option x-text="$t('technical')">Technical</option>
+                                <option x-text="$t('staff')">Staff</option>
+                                <option x-text="$t('event')">Event</option>
                             </select>
                             <span
                                 class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text ml-4">
@@ -154,13 +154,13 @@
 
     <!-- Services -->
     <section id="services" x-data="{ services : [
-        {title:'Digital Marketing', image:'./assets/photos/digital-marketing.png'},
-        {title:'Programmer', image:'./assets/photos/programmer.png'},
-        {title:'Photographer', image:'./assets/photos/photographer.png'},
-        {title:'Cooker Room', image:'./assets/photos/cooker-room.png'},
-        {title:'Driver', image:'./assets/photos/driver.png'},
-        {title:'Accountanting', image:'./assets/photos/accountanting.png'},
-        {title:'Web Design', image:'./assets/photos/web-design.png'},
+        {title:'Digital Marketing', image:'./assets/photos/digital-marketing.png',t:'digital_marketing'},
+        {title:'Programmer', image:'./assets/photos/programmer.png',t:'programmer'},
+        {title:'Photographer', image:'./assets/photos/photographer.png',t:'photographer'},
+        {title:'Cooker Room', image:'./assets/photos/cooker-room.png',t:'cooker_room'},
+        {title:'Driver', image:'./assets/photos/driver.png',t:'driver'},
+        {title:'Accountanting', image:'./assets/photos/accountanting.png',t:'accountanting'},
+        {title:'Web Design', image:'./assets/photos/web-design.png',t:'web_design'},
         ]}" class="py-8">
         <div class="swiper services-swiper">
             <div class="swiper-wrapper !h-[29rem] max-sm:!h-[24rem]">
@@ -169,7 +169,7 @@
                     <div class="swiper-slide !w-[30rem] !h-[27rem] max-sm:!w-[24rem] max-sm:!h-[22rem]">
 
                         <div class="flex flex-col justify-start w-full h-full gap-2">
-                            <h4 x-text="service.title" class="text-xl text-[#222222]"></h4>
+                            <h4 x-text="$t(service.t)" class="text-xl text-[#222222]"></h4>
                             <div class="w-full h-full overflow-hidden rounded-md">
                                 <img class="object-cover w-full h-full" :src="service.image" alt="">
                             </div>
@@ -187,19 +187,19 @@
 
     <!-- Categories -->
     <section x-data="{ categories:[
-        {title:'Technical',icon:'./assets/categories/technical.svg'},
-        {title:'Home & Garden',icon:'./assets/categories/home-garden.svg'},
-        {title:'Business & Services',icon:'./assets/categories/business-services.svg'},
-        {title:'Staff',icon:'./assets/categories/staff.svg'},
-        {title:'Event',icon:'./assets/categories/event.svg'},
-        {title:'photo & video',icon:'./assets/categories/photo-video.svg'},
-        {title:'Others',icon:'./assets/categories/others.svg'},
+        {title:'Technical',icon:'./assets/categories/technical.svg',t:'technical'},
+        {title:'Home & Garden',icon:'./assets/categories/home-garden.svg',t:'home_garden'},
+        {title:'Business & Services',icon:'./assets/categories/business-services.svg',t:'business_services'},
+        {title:'Staff',icon:'./assets/categories/staff.svg',t:'staff'},
+        {title:'Event',icon:'./assets/categories/event.svg',t:'event'},
+        {title:'photo & video',icon:'./assets/categories/photo-video.svg',t:'photo_video'},
+        {title:'Others',icon:'./assets/categories/others.svg',t:'others'},
         ]}" class="container flex flex-col items-center justify-center gap-8 px-8 py-32 mx-auto">
 
 
-        <h3 class="text-4xl font-mtb max-sm:text-3xl">Categories</h3>
+        <h3 class="text-4xl font-mtb max-sm:text-3xl" x-text="$t('categories')">Categories</h3>
         <div
-            class="grid justify-center w-full grid-cols-7 gap-8 py-12 max-sm:grid-cols-2 max-sm:w-4/6 max-sm:place-items-center">
+            class="grid justify-center place-items-center w-full grid-cols-7 gap-8 py-12 max-sm:grid-cols-2 max-sm:w-4/6 ">
             <template x-for="category in categories">
                 <div class="flex flex-col items-center justify-start gap-4 w-[7rem] ">
                     <img class="w-14 h-14" :src="category.icon" :alt="category.title">
@@ -218,14 +218,14 @@
 
     <!-- How it Works -->
     <section id="how-it-works" x-data="{ steps:[
-            {id:1,title:'Create an account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/create.svg'},
-            {id:2,title:'Choose the service',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/service.svg'},
-            {id:3,title:'Choose the best price',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/price.svg'},
-            {id:4,title:'Create your account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/account.svg'}
+            {id:1,title:'Create an account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/create.svg',theader:'steps_create_title',tcontent:'steps_create_content'},
+            {id:2,title:'Choose the service',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/service.svg',theader:'steps_service_title',tcontent:'steps_service_content'},
+            {id:3,title:'Choose the best price',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/price.svg',theader:'steps_price_title',tcontent:'steps_price_content'},
+            {id:4,title:'Create your account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/account.svg',theader:'steps_account_title',tcontent:'steps_account_content'},
             
             ]}" class="py-[6rem] container mx-auto px-8 flex flex-col justify-center items-center gap-8">
 
-        <h3 class="text-4xl font-mtb max-sm:text-3xl">How it Works</h3>
+        <h3 class="text-4xl font-mtb max-sm:text-3xl" x-text="$t('how_it_works')">How it Works</h3>
         <div class="grid justify-between w-full h-full grid-cols-4 gap-4 py-12 max-lg:grid-cols-1">
             <template x-for="step in steps">
                 <div class="flex items-center justify-center h-full gap-4 max-lg:flex-col">
@@ -244,9 +244,9 @@
                             <span
                                 class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
 
-                                <h5 class="text-2xl font-mtb" x-text="step.title"></h5>
+                                <h5 class="text-2xl font-mtb" x-text="$t(step.theader)"></h5>
                             </span>
-                            <p x-text="step.description" class="text-[#979797]"></p>
+                            <p x-text="$t(step.tcontent)" class="text-[#979797]"></p>
                         </div>
                     </div>
 
@@ -529,6 +529,7 @@
                 programmer:'Programmer',
                 digital_marketing:'Digital marketing',
                 cooker_room:'Cooker room',
+                photographer:'Photographer',
                 driver:'Driver',
                 accountanting:'Accountanting',
                 web_design:'Web Design',
@@ -552,13 +553,32 @@
                 newsletter_description:'Subscribe to our newsletter to get updates about our offers.',
                 enter_email:'Enter your email',
                 send:'Send',
-
+                hero_title:'Get the most\n out of Evantto',
+                hero_description:'Beyond your expectations',
+                hero_search: 'Items, collections and creators',
+                technical:'Technician',
+                staff: 'Staff',
+                event: 'Event',
+                categories: 'Categories',
+                photo_video: 'Photo & Video',
+                others: 'Others',
+                home_garden: 'Home & Garden',
+                business_services: 'Business & Services',
+                steps_create_title: 'Create an account',
+                steps_create_content: 'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',
+                steps_service_title: 'Choose the service',
+                steps_service_content: 'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',
+                steps_price_title: 'Choose the best price',
+                steps_price_content: 'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',
+                steps_account_title: 'Create your account',
+                steps_account_content: 'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',
             },
             ar: {
                 consultant:'استشاري',
                 programmer:'مبرمج',
                 digital_marketing:'التسويق الرقمي',
                 cooker_room:'مطبخ',
+                photographer:'مصور',
                 driver:'سائق',
                 accountanting:'المحاسبة',
                 web_design:'تصميم المواقع',
@@ -582,6 +602,25 @@
                 newsletter_description:'اشترك في النشرة البريدية للحصول على تحديثات عن عروضنا.',
                 enter_email:'ادخل بريدك الالكتروني',
                 send:'ارسال',
+                hero_title: 'استفد بأقصى قدر \nمن إيفانتو',
+                hero_description: 'أفضل مما كنت تتوقع',
+                hero_search: 'عناصر، مجموعات ومنشئين',
+                technical:'تقني',
+                staff: 'الموظفين',
+                event: 'الفعاليات',
+                categories: 'التصنيفات',
+                photo_video: 'الصور والفيديو',
+                others: 'غير ذلك',
+                home_garden: 'المنزل والحدائق',
+                business_services: 'الاعمال والخدمات',
+                steps_create_title: 'انشاء حساب',
+                steps_create_content: 'ارسل طلب لأكثر من خدمة واحصل على عروض منتجات من مختلف الموردين.',
+                steps_service_title: 'اختر الخدمة',
+                steps_service_content: 'ارسل طلب لأكثر من خدمة واحصل على عروض منتجات من مختلف الموردين.',
+                steps_price_title: 'اختر السعر الافضل',
+                steps_price_content: 'ارسل طلب لأكثر من خدمة واحصل على عروض منتجات من مختلف الموردين.',
+                steps_account_title: 'انشاء حسابك الخاص',
+                steps_account_content: 'ارسل طلب لأكثر من خدمة واحصل على عروض منتجات من مختلف الموردين.',
             },
 
 
