@@ -33,70 +33,80 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="sticky w-full top-0 z-50 bg-white border-b boreder-solid boreder-[#817e95] h-[5.5rem] max-sm:h-[3rem]">
-        <div class="container relative z-10 flex items-center justify-between h-full px-8 mx-auto ">
-            <div class="flex items-center gap-4">
-                <div class="h-[2rem] max-sm:h-[1.5rem]">
-                    <img class="h-full" width="auto" src="./assets/logo/logo.svg" alt="evento">
-                </div>
-                <div x-data="{ visible: false }" class="relative inline-block text-left">
-                    <div>
-                        <button @click="visible = !visible" type="button"
-                            class="flex w-full justify-center items-center gap-x-1.5 rounded-md text-xl font-mtb font-light bg-white px-3 py-2  text-gray-900  hover:bg-gray-50 max-sm:text-base"
-                            id="menu-button" aria-expanded="true" aria-haspopup="true">
+   <!-- Navbar -->
+   <nav class="sticky w-full top-0 z-50 bg-white border-b boreder-solid boreder-[#817e95] h-[5.5rem] max-sm:h-[3rem]">
+    <div class="container relative z-10 flex items-center justify-between h-full px-8 mx-auto ">
+        <div class="flex items-center gap-4">
+            <div class="h-[2rem] max-sm:h-[1.5rem]">
+                <img class="h-full" width="auto" src="./assets/logo/logo.svg" alt="evento">
+            </div>
+            <div x-data="{ visible: false }" class="relative inline-block text-left">
+                <div>
+                    <button @click="visible = !visible" type="button"
+                        class="flex w-full justify-center items-center gap-x-1.5 rounded-md text-xl font-mtb font-light bg-white px-3 py-2  text-gray-900  hover:bg-gray-50 max-sm:text-base"
+                        id="menu-button" aria-expanded="true" aria-haspopup="true">
+                        <span x-text="$t('services')" class="font-mtb font-light">
                             Services
-                            <i class="ti ti-chevron-down"></i>
-                        </button>
-                    </div>
 
-                    <div x-show="visible"
-                        class="absolute left-0 p-4 z-10 mt-2 w-[20rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                        role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                        <div x-data="{ actions : [
-                            {title: 'Consultant', icon: 'ti ti-user'},
-                            {title: 'Programmer', icon: 'ti ti-code'},
-                            {title: 'Digital marketing', icon: 'ti ti-speakerphone'},
-                            {title: 'Cooker room', icon: 'ti ti-chef-hat'},
-                            {title: 'Driver', icon: 'ti ti-car'},
-                            {title: 'Accountanting', icon: 'ti ti-calculator'},
-                            {title: 'Web Design', icon: 'ti ti-device-laptop'}
-                            ]}" class="py-1" role="none">
-                            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                        </span>
+                        <i class="ti ti-chevron-down"></i>
+                    </button>
+                </div>
 
-                            <template x-for="(action,index) in actions">
+                <div x-show="visible"
+                    class="absolute left-1/2 transform -translate-x-1/2 p-4 z-10 mt-2 w-[20rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                    <div x-data="{ actions : [
+                        {title: 'Consultant', icon: 'ti ti-user',t:'consultant'},
+                        {title: 'Programmer', icon: 'ti ti-code',t:'programmer'},
+                        {title: 'Digital marketing', icon: 'ti ti-speakerphone',t:'digital_marketing'},
+                        {title: 'Cooker room', icon: 'ti ti-chef-hat',t:'cooker_room'},
+                        {title: 'Driver', icon: 'ti ti-car',t:'driver'},
+                        {title: 'Accountanting', icon: 'ti ti-calculator',t:'accountanting'},
+                        {title: 'Web Design', icon: 'ti ti-device-laptop',t:'web_design'}
+                        ]}" class="py-1" role="none">
+                        <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
 
-                                <a href="#"
-                                    class="flex items-center block gap-4 px-4 py-2 text-sm text-gray-700 rounded-md cursor-pointer pointer-events-auto hover:bg-gray-50 "
-                                    role="menuitem" tabindex="-1" id="menu-item-0">
-                                    <span class="p-2 bg-[#92298f2c] rounded-md ">
-                                        <span
-                                            class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+                        <template x-for="(action,index) in actions">
 
-                                            <i :class="`${action.icon} text-[1.1rem] `"></i>
-                                        </span>
+                            <a href="#"
+                                class="flex items-center gap-4 px-4 py-2 text-sm text-gray-700 rounded-md cursor-pointer pointer-events-auto hover:bg-gray-50 "
+                                role="menuitem" tabindex="-1" id="menu-item-0">
+                                <span class="p-2 bg-[#92298f2c] rounded-md ">
+                                    <span
+                                        class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
+
+                                        <i :class="`${action.icon} text-[1.1rem] `"></i>
                                     </span>
-                                    <span class="text-[#747474] text-[1.1rem]" x-text="action.title"></span>
-                                </a>
-                            </template>
-                        </div>
+                                </span>
+                                <span class="text-[#747474] text-[1.1rem]" x-text="$t(action.t)"></span>
+                            </a>
+                        </template>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="flex items-center gap-4">
-                <button type="button"
-                    class="pointer-events-auto cursor-pointer font-mtb font-semibold hover:text-[#92298D] max-sm:text-xs">Login</button>
+        <div x-data class="flex items-center gap-4">
+            <button type="button"
+                class="pointer-events-auto cursor-pointer font-mtb font-semibold hover:text-[#92298D] max-sm:text-xs" x-text="$t('login')">Login</button>
 
-                <button type="button"
-                    class="pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-2 font-mtb   text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block max-sm:text-xs max-sm:py-[0.3rem] max-sm:px-[0.5rem] max-sm:rounded-full">Join
-                    us</button>
+            <button type="button"
+                class="pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-2 font-mtb   text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block max-sm:text-xs max-sm:py-[0.3rem] max-sm:px-[0.5rem] max-sm:rounded-full"
+                x-text="$t('join_us')"
+                >Join
+                us</button>
 
-            </div>
+            <button type="button" x-on:click="toggle"
+                class="pointer-events-auto cursor-pointer rounded-md border hover:bg-[#92298d0a]  py-2 px-4  text-[#92298D]  max-sm:text-xs max-sm:py-[0.3rem] max-sm:px-[0.5rem] max-sm:rounded-full">
+                <i class="ti ti-language"></i>
+            </button>
 
         </div>
-    </nav>
-    <!-- Navbar End-->
+
+    </div>
+</nav>
+<!-- Navbar End-->
 
     <div class="absolute right-0 top-3">
         <img src="./assets/photos/Vector.png">
@@ -163,7 +173,7 @@
 
 
     <!-- Footer-->
-    <footer class="container relative px-8 mx-auto py-44">
+    <footer x-data class="container relative px-8 mx-auto py-44">
         <div class="flex items-start justify-between gap-6 max-md:flex-col max-md:items-center">
             <div class="flex flex-col gap-4 max-md:items-center">
                 <div class="h-[3rem]">
@@ -197,49 +207,49 @@
 
                 </div>
 
-                <p class="mt-12">© 2024 All rights reserved.</p>
+                <p class="mt-12" x-text="$t('copyright')">© 2024 All rights reserved.</p>
             </div>
 
             <div class="flex gap-16 max-md:flex-col">
                 <div class="flex flex-col items-start gap-4 max-md:items-center">
-                    <h5 class="text-2xl">Quick links</h5>
+                    <h5 class="text-2xl" x-text="$t('quick_links')">Quick links</h5>
                     <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
-                        <a href="#">Home</a>
-                        <a href="#">About us</a>
-                        <a href="#services">Services</a>
-                        <a href="#">Contact us</a>
+                        <a href="#" x-text="$t('home')">Home</a>
+                        <a href="#" x-text="$t('about_us')">About us</a>
+                        <a href="#services" x-text="$t('services')">Services</a>
+                        <a href="#" x-text="$t('contact_us')">Contact us</a>
                     </div>
                 </div>
 
                 <div class="flex flex-col items-start gap-4 max-md:items-center">
-                    <h5 class="text-2xl">About</h5>
+                    <h5 class="text-2xl" x-text="$t('about')">About</h5>
                     <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
-                        <a href="#how-it-works">How It Works</a>
+                        <a href="#how-it-works" x-text="$t('how_it_works')">How It Works</a>
                     </div>
                 </div>
 
                 <div class="flex flex-col items-start gap-4 max-md:items-center">
-                    <h5 class="text-2xl">Help Centre</h5>
+                    <h5 class="text-2xl" x-text="$t('help_centre')">Help Centre</h5>
                     <div class="flex flex-col gap-4 items-start text-[#747474] max-md:items-center">
-                        <a href="#">Payments</a>
-                        <a href="#">Shipping</a>
-                        <a href="#">Product returns</a>
-                        <a href="#">Checkout</a>
-                        <a href="#">other Issues</a>
+                        <a href="#" x-text="$t('payments')">Payments</a>
+                        <a href="#" x-text="$t('shipping')">Shipping</a>
+                        <a href="#" x-text="$t('product_returns')">Product returns</a>
+                        <a href="#" x-text="$t('checkout')">Checkout</a>
+                        <a href="#" x-text="$t('other_issues')">other Issues</a>
                     </div>
                 </div>
 
                 <div class="flex flex-col items-start gap-4 max-md:items-center">
-                    <h5 class="text-2xl">Our newsletter</h5>
-                    <p class="text-start">Subscribe to our newsletter to get updates about our offers.</p>
+                    <h5 class="text-2xl" x-text="$t('newsletter')">Our newsletter</h5>
+                    <p class="text-start" x-text="$t('newsletter_description')">Subscribe to our newsletter to get updates about our offers.</p>
 
                     <div class="w-full mt-12 h-fit max-md:mt-4">
                         <div class="relative flex rounded-md shadow-sm">
                             <input type="email" name="email"
-                                class="block w-full py-4 pr-20 text-gray-900 border-0 rounded-l-md pl-7 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                placeholder="Your email address">
+                                class="block w-full py-4 pr-20 text-gray-900 border-0 rounded-s-md pl-7 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                :placeholder="$t('enter_email')">
                             <button
-                                class="pointer-events-auto cursor-pointer rounded-r-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-4 font-semibold leading-5 text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block">Send</button>
+                                class="pointer-events-auto cursor-pointer rounded-e-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-4 font-semibold leading-5 text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block" x-text="$t('send')">Send</button>
                         </div>
                     </div>
                 </div>
@@ -248,10 +258,102 @@
     </footer>
     <!-- Footer End-->
     <script type="module" src="./assets/index.js"></script>
-    <!-- Tabler icons set -->
-    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
-    <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs-i18n@2.x.x/dist/cdn.min.js"></script>
+    <script defer>
+
+        let locale = localStorage.getItem('locale') || 'en';
+
+
+        let messages = {
+            en: {
+                consultant:'Consultant',
+                programmer:'Programmer',
+                digital_marketing:'Digital marketing',
+                cooker_room:'Cooker room',
+                driver:'Driver',
+                accountanting:'Accountanting',
+                web_design:'Web Design',
+                login:'Login',
+                join_us:'Join us',
+                copyright: '© 2024 All rights reserved.',
+                quick_links:'Quick links',
+                home:'Home',
+                about_us:'About us',
+                services:'Services',
+                contact_us:'Contact us',
+                about:'About',
+                how_it_works:'How it works',
+                help_centre:'Help centre',
+                payments:'Payments',
+                shipping:'Shipping',
+                product_returns:'Product returns',
+                checkout:'Checkout',
+                other_issues:'Other issues',
+                newsletter:'Our newsletter',
+                newsletter_description:'Subscribe to our newsletter to get updates about our offers.',
+                enter_email:'Enter your email',
+                send:'Send',
+
+            },
+            ar: {
+                consultant:'استشاري',
+                programmer:'مبرمج',
+                digital_marketing:'التسويق الرقمي',
+                cooker_room:'مطبخ',
+                driver:'سائق',
+                accountanting:'المحاسبة',
+                web_design:'تصميم المواقع',
+                login:'تسجيل الدخول',
+                join_us:'انضم الينا',
+                copyright:'© 2024 جميع الحقوق محفوظة.',
+                quick_links:'روابط سريعة',
+                home:'الرئيسية',
+                about_us:'عنا',
+                services:'الخدمات',
+                contact_us:'اتصل بنا',
+                about:'عنا',
+                how_it_works:'كيف يعمل',
+                help_centre:'مركز المساعدة',
+                payments:'المدفوعات',
+                shipping:'الشحن',
+                product_returns:'المنتجات المرتجعة',
+                checkout:'الدفع',
+                other_issues:'المشكلات الاخرى',
+                newsletter:'النشرة البريدية',
+                newsletter_description:'اشترك في النشرة البريدية للحصول على تحديثات عن عروضنا.',
+                enter_email:'ادخل بريدك الالكتروني',
+                send:'ارسال',
+            },
+
+
+        };
+
+        document.addEventListener('alpine-i18n:ready', function () {
+            AlpineI18n.create(locale, messages);
+        });
+
+        var locales = ['en', 'ar'];
+        var current = 0;
+
+        function toggle() {
+            current++;
+            if (current >= locales.length) {
+                current = 0;
+            }
+
+            AlpineI18n.locale = locales[current];
+            localStorage.setItem('locale', locales[current]);
+        }
+
+        // listen to locale changes and update direction
+        document.addEventListener('alpine-i18n:locale-change', function () {
+            if (AlpineI18n.locale === 'ar') {
+                document.body.setAttribute('dir', 'rtl');
+            } else {
+                document.body.removeAttribute('dir');
+            }
+        });
+    </script>
 </body>
 
 </html>
