@@ -187,7 +187,7 @@
 
     <!-- Categories -->
     <section x-data="{ categories:[
-        {title:'Technical',icon:'./assets/categories/technical.svg',t:'technical'},
+        {title:'Technical',icon:'./assets/categories/technical.png',t:'technical'},
         {title:'Home & Garden',icon:'./assets/categories/home-garden.svg',t:'home_garden'},
         {title:'Business & Services',icon:'./assets/categories/business-services.svg',t:'business_services'},
         {title:'Staff',icon:'./assets/categories/staff.svg',t:'staff'},
@@ -220,7 +220,7 @@
     <section id="how-it-works" x-data="{ steps:[
             {id:1,title:'Create an account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/create.svg',theader:'steps_create_title',tcontent:'steps_create_content'},
             {id:2,title:'Choose the service',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/service.svg',theader:'steps_service_title',tcontent:'steps_service_content'},
-            {id:3,title:'Choose the best price',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/price.svg',theader:'steps_price_title',tcontent:'steps_price_content'},
+            {id:3,title:'Choose the best price',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/price.png',theader:'steps_price_title',tcontent:'steps_price_content'},
             {id:4,title:'Create your account',description:'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',icon:'./assets/how-it-works/account.svg',theader:'steps_account_title',tcontent:'steps_account_content'},
             
             ]}" class="py-[6rem] container mx-auto px-8 flex flex-col justify-center items-center gap-8">
@@ -236,7 +236,7 @@
                                 class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
                                 <p x-text="step.id" class="text-center text-8xl font-mtb"></p>
                             </span>
-                            <span>
+                            <span class="w-1/5">
                                 <img :src="step.icon" :alt="step.title">
                             </span>
                         </div>
@@ -299,8 +299,15 @@
                 <h3 class="text-4xl text-center font-mtb max-sm:text-3xl">Customer opinions</h3>
                 <a class="flex items-center bg-gradient-to-r from-[#CE4F57]  to-[#92298D] text-transparent bg-clip-text text-2xl max-sm:hidden"
                     href="#">
+                    <div class="w-10 rtl:hidden">
                     <i class="ti ti-arrow-right"></i>
-                    Our Client</a>
+                    </div>
+                    <div class="w-10 ltr:hidden">
+                        <i class="ti ti-arrow-left"></i>
+                        </div>
+                    Our Client
+                </a>
+                
 
 
 
@@ -360,7 +367,12 @@
                 <h3 class="text-4xl text-center font-mtb max-sm:text-3xl">Latest blog posts</h3>
                 <a class="flex items-center bg-gradient-to-r from-[#CE4F57]  to-[#92298D] text-transparent bg-clip-text text-2xl max-sm:hidden"
                     href="#">
-                    <i class="ti ti-arrow-right"></i>
+                    <div class="w-10 rtl:hidden">
+                        <i class="ti ti-arrow-right"></i>
+                        </div>
+                        <div class="w-10 ltr:hidden">
+                            <i class="ti ti-arrow-left"></i>
+                            </div>
                     More Blogs</a>
             </div>
 
