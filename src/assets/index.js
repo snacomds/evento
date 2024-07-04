@@ -6,7 +6,7 @@ const servicesSwiper = new Swiper('.services-swiper', {
   slidesPerView: "auto",
   centeredSlides: true,
   spaceBetween: 30,
-  
+  nested: true,
   slidesPerGroup: 1,
   grabCursor: true,
   loop: true,

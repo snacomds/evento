@@ -45,7 +45,7 @@
                         <button @click="visible = !visible" type="button"
                             class="flex w-full justify-center items-center gap-x-1.5 rounded-md text-xl font-mtb font-light bg-white px-3 py-2  text-gray-900  hover:bg-gray-50 max-sm:text-base"
                             id="menu-button" aria-expanded="true" aria-haspopup="true">
-                            <span x-text="$t('services')" class="font-mtb font-light">
+                            <span x-text="$t('services')" class="font-light font-mtb">
                                 Services
 
                             </span>
@@ -118,7 +118,7 @@
             <img class="object-fill w-full h-full" src="./assets/photos/hero.jpg" alt="">
 
             <div class="absolute top-0 flex flex-col items-center justify-center w-full h-full ">
-                <h1 class="text-6xl text-center shadow-md whitespace-pre-wrap font-mtb text-white/80 max-sm:text-5xl" x-text="$t('hero_title')">Get the most
+                <h1 class="text-6xl text-center whitespace-pre-wrap shadow-md font-mtb text-white/80 max-sm:text-5xl" x-text="$t('hero_title')">Get the most
                     <br />
                     out of Evantto
                 </h1>
@@ -131,10 +131,10 @@
                         <input type="text" name="search" id="search"
                             class="block w-full py-6 pr-20 text-gray-900 border-0 rounded-xl pl-7 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset max-sm:text-sm max-sm:leading-6 max-sm:py-4"
                             :placeholder="$t('hero_search')">
-                        <div class="absolute inset-y-0 end-0 flex items-center p-4">
+                        <div class="absolute inset-y-0 flex items-center p-4 end-0">
                             <label for="category" class="sr-only">Category</label>
                             <select id="category" name="category"
-                                class="h-full py-0 ps-2 text-gray-500 bg-transparent border-0 rounded-md pe-7 focus:ring-2 focus:ring-inset sm:text-sm">
+                                class="h-full py-0 text-gray-500 bg-transparent border-0 rounded-md ps-2 pe-7 focus:ring-2 focus:ring-inset sm:text-sm">
                                 <option x-text="$t('technical')">Technical</option>
                                 <option x-text="$t('staff')">Staff</option>
                                 <option x-text="$t('event')">Event</option>
@@ -199,7 +199,7 @@
 
         <h3 class="text-4xl font-mtb max-sm:text-3xl" x-text="$t('categories')">Categories</h3>
         <div
-            class="grid justify-center place-items-center w-full grid-cols-7 gap-8 py-12 max-sm:grid-cols-2 max-sm:w-4/6 ">
+            class="grid justify-center w-full grid-cols-7 gap-8 py-12 place-items-center max-sm:grid-cols-2 max-sm:w-4/6 ">
             <template x-for="category in categories">
                 <div class="flex flex-col items-center justify-start gap-4 w-[7rem] ">
                     <img class="w-14 h-14" :src="category.icon" :alt="category.title">
@@ -251,7 +251,9 @@
                     </div>
 
                     <div x-show="step.id !== 4">
-                        <i class="text-4xl ti ti-chevron-right max-lg:hidden"></i>
+                        <div class="rtl:rotate-180">
+                        <i class="text-4xl ti ti-chevron-right rtl:rotate-180 max-lg:hidden"></i>
+                    </div>
                         <i class="text-4xl ti ti-chevron-down lg:hidden"></i>
                     </div>
                 </div>
@@ -648,7 +650,7 @@
             if (AlpineI18n.locale === 'ar') {
                 document.body.setAttribute('dir', 'rtl');
             } else {
-                document.body.removeAttribute('dir');
+                document.body.setAttribute('dir', 'ltr');
             }
         });
     </script>
