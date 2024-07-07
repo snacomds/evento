@@ -6,6 +6,8 @@ module.exports = {
       fontFamily:{
         mt:["Arial Rounded MT", "sans-serif"],
         mtb:["Arial Rounded MT Bold", "sans-serif"],
+        noto:["Noto Sans Arabic", "sans-serif"],
+
 
       }
     },

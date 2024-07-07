@@ -11,6 +11,10 @@ html {
   font-family: 'Arial Rounded MT', sans-serif;
 
 }
+
+*:where([dir="rtl"], [dir="rtl"] *) {
+  font-family: "Noto Sans Arabic", sans-serif;
+}
 body{
     width:100%;
     position: relative;

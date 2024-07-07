@@ -19,6 +19,10 @@
     <!-- Fonts -->
     <link href="https://fonts.cdnfonts.com/css/arial-mt" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -32,7 +36,7 @@
 
 </head>
 
-<body>
+<body class="rtl:font-noto">
     <!-- Navbar -->
     <nav class="sticky w-full top-0 z-50 bg-white border-b boreder-solid boreder-[#817e95] h-[5.5rem] max-sm:h-[3rem]">
         <div class="container relative z-10 flex items-center justify-between h-full px-8 mx-auto ">
@@ -43,9 +47,9 @@
                 <div x-data="{ visible: false }" class="relative inline-block text-left">
                     <div>
                         <button @click="visible = !visible" type="button"
-                            class="flex w-full justify-center items-center gap-x-1.5 rounded-md text-xl font-mtb font-light bg-white px-3 py-2  text-gray-900  hover:bg-gray-50 max-sm:text-base"
+                            class="flex w-full justify-center items-center gap-x-1.5 rounded-md text-xl ltr:font-mtb rtl:font-noto font-light bg-white px-3 py-2  text-gray-900  hover:bg-gray-50 max-sm:text-base"
                             id="menu-button" aria-expanded="true" aria-haspopup="true">
-                            <span x-text="$t('services')" class="font-light font-mtb">
+                            <span x-text="$t('services')" class="font-light ltr:font-mtb rtl:font-noto">
                                 Services
 
                             </span>
@@ -79,7 +83,7 @@
                                             <i :class="`${action.icon} text-[1.1rem] `"></i>
                                         </span>
                                     </span>
-                                    <span class="text-[#747474] text-[1.1rem]" x-text="$t(action.t)"></span>
+                                    <span class="text-[#747474] text-[1.1rem] rtl:font-noto" x-text="$t(action.t)"></span>
                                 </a>
                             </template>
                         </div>
@@ -89,12 +93,12 @@
 
             <div x-data class="flex items-center gap-4">
                 <button type="button"
-                    class="pointer-events-auto cursor-pointer font-mtb font-semibold hover:text-[#92298D] max-sm:text-xs" x-text="$t('login')">Login</button>
+                    class="pointer-events-auto cursor-pointer ltr:font-mtb rtl:font-noto font-semibold hover:text-[#92298D] max-sm:text-xs"
+                    x-text="$t('login')">Login</button>
 
                 <button type="button"
-                    class="pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-2 font-mtb   text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block max-sm:text-xs max-sm:py-[0.3rem] max-sm:px-[0.5rem] max-sm:rounded-full"
-                    x-text="$t('join_us')"
-                    >Join
+                    class="pointer-events-auto cursor-pointer rounded-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-2 ltr:font-mtb rtl:font-noto   text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block max-sm:text-xs max-sm:py-[0.3rem] max-sm:px-[0.5rem] max-sm:rounded-full"
+                    x-text="$t('join_us')">Join
                     us</button>
 
                 <button type="button" x-on:click="toggle"
@@ -118,12 +122,14 @@
             <img class="object-fill w-full h-full" src="./assets/photos/hero.jpg" alt="">
 
             <div class="absolute top-0 flex flex-col items-center justify-center w-full h-full ">
-                <h1 class="text-6xl text-center whitespace-pre-wrap shadow-md font-mtb text-white/80 max-sm:text-5xl" x-text="$t('hero_title')">Get the most
+                <h1 class="text-6xl text-center whitespace-pre-wrap shadow-md ltr:font-mtb rtl:font-noto rtl:font-bold text-white/80 max-sm:text-5xl"
+                    x-text="$t('hero_title')">Get the most
                     <br />
                     out of Evantto
                 </h1>
 
-                <p class="mt-16 text-3xl text-center text-white shadow-md opacity-80 max-sm:text-2xl" x-text="$t('hero_description')">Beyond your
+                <p class="mt-16 text-3xl text-center text-white shadow-md opacity-80 max-sm:text-2xl"
+                    x-text="$t('hero_description')">Beyond your
                     expectations </p>
 
                 <div class="w-[36rem] mt-8 max-sm:w-full max-sm:px-6">
@@ -197,7 +203,7 @@
         ]}" class="container flex flex-col items-center justify-center gap-8 px-8 py-32 mx-auto">
 
 
-        <h3 class="text-4xl font-mtb max-sm:text-3xl" x-text="$t('categories')">Categories</h3>
+        <h3 class="text-4xl ltr:font-mtb rtl:font-noto max-sm:text-3xl" x-text="$t('categories')">Categories</h3>
         <div
             class="grid justify-center w-full grid-cols-7 gap-8 py-12 place-items-center max-sm:grid-cols-2 max-sm:w-4/6 ">
             <template x-for="category in categories">
@@ -206,7 +212,7 @@
                     <span
                         class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
 
-                        <p  class="text-xl text-center font-mtb" x-text="$t(category.t)"></p>
+                        <p class="text-xl text-center ltr:font-mtb rtl:font-noto" x-text="$t(category.t)"></p>
                     </span>
                 </div>
             </template>
@@ -225,7 +231,7 @@
             
             ]}" class="py-[6rem] container mx-auto px-8 flex flex-col justify-center items-center gap-8">
 
-        <h3 class="text-4xl font-mtb max-sm:text-3xl" x-text="$t('how_it_works')">How it Works</h3>
+        <h3 class="text-4xl ltr:font-mtb rtl:font-noto max-sm:text-3xl" x-text="$t('how_it_works')">How it Works</h3>
         <div class="grid justify-between w-full h-full grid-cols-4 gap-4 py-12 max-lg:grid-cols-1">
             <template x-for="step in steps">
                 <div class="flex items-center justify-center h-full gap-4 max-lg:flex-col">
@@ -234,7 +240,7 @@
                         <div class="flex items-center justify-between w-full">
                             <span
                                 class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
-                                <p x-text="step.id" class="text-center text-8xl font-mtb"></p>
+                                <p x-text="step.id" class="text-center text-8xl ltr:font-mtb rtl:font-noto"></p>
                             </span>
                             <span class="w-1/5">
                                 <img :src="step.icon" :alt="step.title">
@@ -244,7 +250,7 @@
                             <span
                                 class="bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block text-transparent bg-clip-text">
 
-                                <h5 class="text-2xl font-mtb" x-text="$t(step.theader)"></h5>
+                                <h5 class="text-2xl ltr:font-mtb rtl:font-noto" x-text="$t(step.theader)"></h5>
                             </span>
                             <p x-text="$t(step.tcontent)" class="text-[#979797]"></p>
                         </div>
@@ -252,8 +258,8 @@
 
                     <div x-show="step.id !== 4">
                         <div class="rtl:rotate-180">
-                        <i class="text-4xl ti ti-chevron-right rtl:rotate-180 max-lg:hidden"></i>
-                    </div>
+                            <i class="text-4xl ti ti-chevron-right rtl:rotate-180 max-lg:hidden"></i>
+                        </div>
                         <i class="text-4xl ti ti-chevron-down lg:hidden"></i>
                     </div>
                 </div>
@@ -272,7 +278,7 @@
     <section
         x-data="{partners:['./assets/partners/1.svg','./assets/partners/2.svg','./assets/partners/3.svg','./assets/partners/4.svg','./assets/partners/5.svg']}"
         class="bg-[#EDEDEF] py-12">
-        <h3 class="text-4xl text-center font-mtb max-sm:text-3xl">Our Partners</h3>
+        <h3 class="text-4xl text-center ltr:font-mtb rtl:font-noto max-sm:text-3xl">Our Partners</h3>
 
         <div class="container flex justify-between w-full gap-4 px-8 py-12 mx-auto">
             <template x-for="partner in partners ">
@@ -296,18 +302,18 @@
         <div class="flex flex-col items-center w-full gap-12">
             <div class="flex items-center justify-between w-full max-sm:justify-center">
                 <div class="max-sm:hidden"></div>
-                <h3 class="text-4xl text-center font-mtb max-sm:text-3xl">Customer opinions</h3>
+                <h3 class="text-4xl text-center ltr:font-mtb rtl:font-noto max-sm:text-3xl">Customer opinions</h3>
                 <a class="flex items-center bg-gradient-to-r from-[#CE4F57]  to-[#92298D] text-transparent bg-clip-text text-2xl max-sm:hidden"
                     href="#">
                     <div class="w-10 rtl:hidden">
-                    <i class="ti ti-arrow-right"></i>
+                        <i class="ti ti-arrow-right"></i>
                     </div>
                     <div class="w-10 ltr:hidden">
                         <i class="ti ti-arrow-left"></i>
-                        </div>
+                    </div>
                     Our Client
                 </a>
-                
+
 
 
 
@@ -364,16 +370,17 @@
 
             <div class="flex items-center justify-between w-full max-sm:justify-center">
                 <div class="max-sm:hidden"></div>
-                <h3 class="text-4xl text-center font-mtb max-sm:text-3xl">Latest blog posts</h3>
+                <h3 class="text-4xl text-center ltr:font-mtb rtl:font-noto max-sm:text-3xl">Latest blog posts</h3>
                 <a class="flex items-center bg-gradient-to-r from-[#CE4F57]  to-[#92298D] text-transparent bg-clip-text text-2xl max-sm:hidden"
                     href="#">
                     <div class="w-10 rtl:hidden">
                         <i class="ti ti-arrow-right"></i>
-                        </div>
-                        <div class="w-10 ltr:hidden">
-                            <i class="ti ti-arrow-left"></i>
-                            </div>
-                    More Blogs</a>
+                    </div>
+                    <div class="w-10 ltr:hidden">
+                        <i class="ti ti-arrow-left"></i>
+                    </div>
+                    More Blogs
+                </a>
             </div>
 
             <div class="grid items-center grid-cols-3 gap-6 py-12 max-md:grid-cols-1">
@@ -422,8 +429,9 @@
     <section class=" bg-[#EDEDEF] py-12">
 
         <div class="container grid grid-cols-2 gap-8 px-8 mx-auto max-md:grid-cols-1">
-            <h3 class="text-4xl text-start font-mtb max-md:text-center max-md:w-2/3 max-md:mx-auto">Sign Up for our
-                <br /> newsletter and never miss any offers</h3>
+            <h3 class="text-4xl text-start ltr:font-mtb rtl:font-noto max-md:text-center max-md:w-2/3 max-md:mx-auto">Sign Up for our
+                <br /> newsletter and never miss any offers
+            </h3>
             <div class="flex flex-col items-center justify-center w-2/3 gap-4 ms-auto max-md:mx-auto">
                 <div class="w-full h-fit">
                     <div class="relative rounded-md shadow-sm">
@@ -514,7 +522,8 @@
 
                 <div class="flex flex-col items-start gap-4 max-md:items-center">
                     <h5 class="text-2xl" x-text="$t('newsletter')">Our newsletter</h5>
-                    <p class="text-start" x-text="$t('newsletter_description')">Subscribe to our newsletter to get updates about our offers.</p>
+                    <p class="text-start" x-text="$t('newsletter_description')">Subscribe to our newsletter to get
+                        updates about our offers.</p>
 
                     <div class="w-full mt-12 h-fit max-md:mt-4">
                         <div class="relative flex rounded-md shadow-sm">
@@ -522,7 +531,8 @@
                                 class="block w-full py-4 pr-20 text-gray-900 border-0 rounded-s-md pl-7 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 :placeholder="$t('enter_email')">
                             <button
-                                class="pointer-events-auto cursor-pointer rounded-e-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-4 font-semibold leading-5 text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block" x-text="$t('send')">Send</button>
+                                class="pointer-events-auto cursor-pointer rounded-e-md bg-gradient-to-r from-[#CE4F57]  to-[#92298D] inline-block px-8 py-4 font-semibold leading-5 text-white hover:bg-gradient-to-r hover:from-[#ad4048]  hover:to-[#751e71] hover:inline-block"
+                                x-text="$t('send')">Send</button>
                         </div>
                     </div>
                 </div>
@@ -539,38 +549,38 @@
 
         let messages = {
             en: {
-                consultant:'Consultant',
-                programmer:'Programmer',
-                digital_marketing:'Digital marketing',
-                cooker_room:'Cooker room',
-                photographer:'Photographer',
-                driver:'Driver',
-                accountanting:'Accountanting',
-                web_design:'Web Design',
-                login:'Login',
-                join_us:'Join us',
+                consultant: 'Consultant',
+                programmer: 'Programmer',
+                digital_marketing: 'Digital marketing',
+                cooker_room: 'Cooker room',
+                photographer: 'Photographer',
+                driver: 'Driver',
+                accountanting: 'Accountanting',
+                web_design: 'Web Design',
+                login: 'Login',
+                join_us: 'Join us',
                 copyright: '© 2024 All rights reserved.',
-                quick_links:'Quick links',
-                home:'Home',
-                about_us:'About us',
-                services:'Services',
-                contact_us:'Contact us',
-                about:'About',
-                how_it_works:'How it works',
-                help_centre:'Help centre',
-                payments:'Payments',
-                shipping:'Shipping',
-                product_returns:'Product returns',
-                checkout:'Checkout',
-                other_issues:'Other issues',
-                newsletter:'Our newsletter',
-                newsletter_description:'Subscribe to our newsletter to get updates about our offers.',
-                enter_email:'Enter your email',
-                send:'Send',
-                hero_title:'Get the most\n out of Evantto',
-                hero_description:'Beyond your expectations',
+                quick_links: 'Quick links',
+                home: 'Home',
+                about_us: 'About us',
+                services: 'Services',
+                contact_us: 'Contact us',
+                about: 'About',
+                how_it_works: 'How it works',
+                help_centre: 'Help centre',
+                payments: 'Payments',
+                shipping: 'Shipping',
+                product_returns: 'Product returns',
+                checkout: 'Checkout',
+                other_issues: 'Other issues',
+                newsletter: 'Our newsletter',
+                newsletter_description: 'Subscribe to our newsletter to get updates about our offers.',
+                enter_email: 'Enter your email',
+                send: 'Send',
+                hero_title: 'Get the most\n out of Evantto',
+                hero_description: 'Beyond your expectations',
                 hero_search: 'Items, collections and creators',
-                technical:'Technician',
+                technical: 'Technician',
                 staff: 'Staff',
                 event: 'Event',
                 categories: 'Categories',
@@ -588,38 +598,38 @@
                 steps_account_content: 'Submit a request for as many services as you need and receive bespoke quotes from a range of trusted suppliers.',
             },
             ar: {
-                consultant:'استشاري',
-                programmer:'مبرمج',
-                digital_marketing:'التسويق الرقمي',
-                cooker_room:'مطبخ',
-                photographer:'مصور',
-                driver:'سائق',
-                accountanting:'المحاسبة',
-                web_design:'تصميم المواقع',
-                login:'تسجيل الدخول',
-                join_us:'انضم الينا',
-                copyright:'© 2024 جميع الحقوق محفوظة.',
-                quick_links:'روابط سريعة',
-                home:'الرئيسية',
-                about_us:'عنا',
-                services:'الخدمات',
-                contact_us:'اتصل بنا',
-                about:'عنا',
-                how_it_works:'كيف يعمل',
-                help_centre:'مركز المساعدة',
-                payments:'المدفوعات',
-                shipping:'الشحن',
-                product_returns:'المنتجات المرتجعة',
-                checkout:'الدفع',
-                other_issues:'المشكلات الاخرى',
-                newsletter:'النشرة البريدية',
-                newsletter_description:'اشترك في النشرة البريدية للحصول على تحديثات عن عروضنا.',
-                enter_email:'ادخل بريدك الالكتروني',
-                send:'ارسال',
+                consultant: 'استشاري',
+                programmer: 'مبرمج',
+                digital_marketing: 'التسويق الرقمي',
+                cooker_room: 'مطبخ',
+                photographer: 'مصور',
+                driver: 'سائق',
+                accountanting: 'المحاسبة',
+                web_design: 'تصميم المواقع',
+                login: 'تسجيل الدخول',
+                join_us: 'انضم الينا',
+                copyright: '© 2024 جميع الحقوق محفوظة.',
+                quick_links: 'روابط سريعة',
+                home: 'الرئيسية',
+                about_us: 'عنا',
+                services: 'الخدمات',
+                contact_us: 'اتصل بنا',
+                about: 'عنا',
+                how_it_works: 'كيف يعمل',
+                help_centre: 'مركز المساعدة',
+                payments: 'المدفوعات',
+                shipping: 'الشحن',
+                product_returns: 'المنتجات المرتجعة',
+                checkout: 'الدفع',
+                other_issues: 'المشكلات الاخرى',
+                newsletter: 'النشرة البريدية',
+                newsletter_description: 'اشترك في النشرة البريدية للحصول على تحديثات عن عروضنا.',
+                enter_email: 'ادخل بريدك الالكتروني',
+                send: 'ارسال',
                 hero_title: 'استفد بأقصى قدر \nمن إيفانتو',
                 hero_description: 'أفضل مما كنت تتوقع',
                 hero_search: 'عناصر، مجموعات ومنشئين',
-                technical:'تقني',
+                technical: 'تقني',
                 staff: 'الموظفين',
                 event: 'الفعاليات',
                 categories: 'التصنيفات',
